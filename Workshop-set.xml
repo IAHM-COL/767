@@ -652,6 +652,8 @@
 		</generic>
 	</multiplay>
 
+	<tanker type="bool">true</tanker>
+
 	<nasal>
 		<b767>
 			<file>Aircraft/767/Nasal/Electrical.nas</file>
