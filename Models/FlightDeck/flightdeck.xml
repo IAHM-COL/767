@@ -88,7 +88,7 @@
 		<inherits-from>Effects/lightmap</inherits-from>
 		<parameters>
 			<texture n="1">
-				<image>Aircraft/787-8/Models/Effects/shell-lightmap.png</image>
+				<image>Aircraft/767/Models/Effects/shell-lightmap.png</image>
 			</texture>
 			<condition>
 				<use>controls/lighting/cockpit</use>
@@ -212,7 +212,7 @@
 	</model>
 
 	<!-- model>
-		<path>Aircraft/787-8/Models/Instruments/MFD2.xml</path>
+		<path>Aircraft/767/Models/Instruments/MFD2.xml</path>
 		<offsets>
 			<x-m>-23.78</x-m>
 			<y-m>0.16</y-m>
@@ -222,7 +222,7 @@
 	</model -->
 
 	<!-- model>
-		<path>Aircraft/787-8/Models/Instruments/MFD3.xml</path>
+		<path>Aircraft/767/Models/Instruments/MFD3.xml</path>
 		<offsets>
 			<x-m>-23.78</x-m>
 			<y-m>0.338</y-m>
@@ -491,13 +491,13 @@
 <!-- Fog -->
 
 	<!-- model>
-		<path>Aircraft/787-8/Models/fog.xml</path>
+		<path>Aircraft/767/Models/fog.xml</path>
 	</model -->
 
 <!-- CDU (MFD CDUs) -->
 
 	<!-- model>
-		<path>Aircraft/787-8/Models/Instruments/CDU.xml</path>
+		<path>Aircraft/767/Models/Instruments/CDU.xml</path>
 		<offsets>
 			<x-m>-23.58</x-m>
 			<y-m>-0.078</y-m>
@@ -507,7 +507,7 @@
 	</model>
 
 	<model>
-		<path>Aircraft/787-8/Models/Instruments/CDU1.xml</path>
+		<path>Aircraft/767/Models/Instruments/CDU1.xml</path>
 		<offsets>
 			<x-m>-23.58</x-m>
 			<y-m>0.078</y-m>
@@ -519,7 +519,7 @@
 <!-- Electronic Flight Bags (EFBs) -->
 
 	<!-- model>
-		<path>Aircraft/787-8/EFB-DB/EFB.xml</path>
+		<path>Aircraft/767/EFB-DB/EFB.xml</path>
 		<offsets>
 			<x-m>-23.4</x-m>
 			<y-m>-1.08</y-m>
@@ -530,7 +530,7 @@
 	</model>
 
 	<model>
-		<path>Aircraft/787-8/EFB-DB/EFB.xml</path>
+		<path>Aircraft/767/EFB-DB/EFB.xml</path>
 		<offsets>
 			<x-m>-23.4</x-m>
 			<y-m>1.08</y-m>
@@ -543,11 +543,11 @@
 <!-- CDU (Pedestal CDUs) -->
 
 	<!-- model>
-		<path>Aircraft/787-8/Models/Instruments/CDU2.xml</path>
+		<path>Aircraft/767/Models/Instruments/CDU2.xml</path>
 	</model>
 
 	<model>
-		<path>Aircraft/787-8/Models/Instruments/CDU2.xml</path>
+		<path>Aircraft/767/Models/Instruments/CDU2.xml</path>
 		<offsets>
 			<x-m>-0.116</x-m>
 			<y-m>-0.152</y-m>
@@ -555,7 +555,7 @@
 	</model>
 
 	<model>
-		<path>Aircraft/787-8/Models/Instruments/CDU2.xml</path>
+		<path>Aircraft/767/Models/Instruments/CDU2.xml</path>
 		<offsets>
 			<x-m>-0.116</x-m>
 			<y-m>0.152</y-m>
