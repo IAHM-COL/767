@@ -50,7 +50,6 @@
 		<type>material</type>
 		<object-name>Fuselage</object-name>
 		<object-name>engines</object-name>
-		<object-name>reverser</object-name>
 		<object-name>tail</object-name>
 		<object-name>VRudder</object-name>
 		<object-name>LdoorNoseGear</object-name>
@@ -71,7 +70,6 @@
 	  <inherits-from>Effects/Pegasus-combShaders</inherits-from>
 	  <object-name>Fuselage</object-name>
 	  <object-name>engines</object-name>
-	  <object-name>reverser</object-name>
 	  <object-name>tail</object-name>
 	  <object-name>VRudder</object-name>
 	  <object-name>GDL</object-name>
