@@ -357,6 +357,72 @@
 					</item>
 
 					<item>
+						<label>Extend Boom</label>
+						<binding>
+							<command>property-assign</command>
+							<property>voodoomaster/refuel/boom-angle</property>
+							<value>0.6</value>
+						</binding>
+						<binding>
+							<command>property-assign</command>
+							<property>voodoomaster/refuel/boom-extend</property>
+							<value>1.0</value>
+						</binding>
+					</item>
+
+					<item>
+						<label>Retract Boom</label>
+						<binding>
+							<command>property-assign</command>
+							<property>voodoomaster/refuel/boom-angle</property>
+							<value>0.0</value>
+						</binding>
+						<binding>
+							<command>property-assign</command>
+							<property>voodoomaster/refuel/boom-extend</property>
+							<value>0.0</value>
+						</binding>
+					</item>
+
+					<item>
+						<label>Extend Probes</label>
+						<binding>
+							<command>property-assign</command>
+							<property>voodoomaster/refuel[1]/probe-extended</property>
+							<value>true</value>
+						</binding>
+						<binding>
+							<command>property-assign</command>
+							<property>voodoomaster/refuel[2]/probe-extended</property>
+							<value>true</value>
+						</binding>
+						<binding>
+							<command>property-assign</command>
+							<property>voodoomaster/refuel[3]/probe-extended</property>
+							<value>true</value>
+						</binding>
+					</item>
+
+					<item>
+						<label>Retract Probes</label>
+						<binding>
+							<command>property-assign</command>
+							<property>voodoomaster/refuel[1]/probe-extended</property>
+							<value>false</value>
+						</binding>
+						<binding>
+							<command>property-assign</command>
+							<property>voodoomaster/refuel[2]/probe-extended</property>
+							<value>false</value>
+						</binding>
+						<binding>
+							<command>property-assign</command>
+							<property>voodoomaster/refuel[3]/probe-extended</property>
+							<value>false</value>
+						</binding>
+					</item>
+
+					<item>
 						<label>Pushback</label>
 						<name>pushback</name>
 						<binding>
@@ -475,24 +541,16 @@
 
 		<weight n="2">
 			<!-- AirVac team (KC-46) or TechTeam (Workshop) -->
-			<name>Tech ops</name>
+			<name>AirVac Team</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]" />
 			<min-lb type="double">    0</min-lb>
 			<max-lb type="double"> 3000</max-lb>
 		</weight>
 
 		<weight n="3">
-			<!-- 3 operators -->
-			<name>Radar ops</name>
-			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]" />
-			<min-lb type="double">    0</min-lb>
-			<max-lb type="double">  600</max-lb>
-		</weight>
-
-		<weight n="4">
 			<!-- Spare parts -->
-			<name>Spare parts</name>
-			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[4]" />
+			<name>Load</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]" />
 			<min-lb type="double">    0</min-lb>
 			<max-lb type="double">65000</max-lb>
 		</weight>
