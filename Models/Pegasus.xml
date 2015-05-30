@@ -48,20 +48,42 @@
 	<!-- Livery Selection Animation -->
 	<animation>
 		<type>material</type>
-		<object-name>fuselage</object-name>
+		<object-name>Fuselage</object-name>
 		<object-name>engines</object-name>
 		<object-name>reverser</object-name>
 		<object-name>tail</object-name>
 		<object-name>VRudder</object-name>
-		<object-name>GDL</object-name>
+		<object-name>LdoorNoseGear</object-name>
 		<object-name>GDR</object-name>
-		<object-name>cargodoor</object-name>
+		<object-name>VStab.001</object-name>
+		<object-name>LCapaturbofan.004</object-name>
+		<object-name>LCapaturbofan.001</object-name>
+		<object-name>RCapaturbofan.001</object-name>
+		<object-name>RCapaturbofan.003</object-name>
 		<property-base>sim/model/livery</property-base>
 		<texture-prop>texture</texture-prop>
-		<texture>JFW.png</texture>
+		<texture>Pegasus.png</texture>
 	</animation>
 	<!-- Livery System -->
-    
+
+	<!-- Shaders -->
+	<effect>
+	  <inherits-from>Effects/Pegasus-combShaders</inherits-from>
+	  <object-name>Fuselage</object-name>
+	  <object-name>engines</object-name>
+	  <object-name>reverser</object-name>
+	  <object-name>tail</object-name>
+	  <object-name>VRudder</object-name>
+	  <object-name>GDL</object-name>
+	  <object-name>GDR</object-name>
+	  <object-name>cargodoor</object-name>
+	  <object-name>VStab.001</object-name>
+	  <object-name>LCapaturbofan.004</object-name>
+	  <object-name>LCapaturbofan.001</object-name>
+	  <object-name>RCapaturbofan.001</object-name>
+	  <object-name>RCapaturbofan.003</object-name>
+	</effect>
+
 	<!-- Cockpit, with everything included in the flightdeck directed from this file -->
 	<model>
 		<!-- path>Aircraft/767/Models/Cockpit/cockpit.xml</path -->
