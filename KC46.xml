@@ -71,7 +71,7 @@
 		<izz unit="SLUG*FT2">   9220445 </izz>
 		<emptywt unit="LBS" >    198440 </emptywt>
 		<location name="CG" unit="IN">
-			<x> -30.00 </x>
+			<x> -20.00 </x>
 			<y>   0.00 </y>
 			<z> -54.07 </z>
 		</location>
@@ -96,9 +96,9 @@
 			</location>
 		</pointmass> 
 
-		<pointmass name="Tech ops">
+		<pointmass name="AirVac">
 			<description>Careful, can be overloaded! Different configurations for different missions!</description>
-			<weight unit="LBS"> 3000.0000 </weight>
+			<weight unit="LBS"> 0.0000 </weight>
 			<location name="Tech ops" unit="IN">
 				<x>  -400.00 </x>
 				<y>     0.00 </y>
@@ -106,19 +106,9 @@
 			</location>
 		</pointmass> 
 
-		<pointmass name="Radar ops">
+		<pointmass name="Load">
 			<description>Careful, can be overloaded! Different configurations for different missions!</description>
-			<weight unit="LBS"> 600.0000 </weight>
-			<location name="Tech ops" unit="IN">
-				<x>   200.00 </x>
-				<y>     0.00 </y>
-				<z>   -54.07 </z>
-			</location>
-		</pointmass> 
-
-		<pointmass name="Spare parts">
-			<description>Careful, can be overloaded! Different configurations for different missions!</description>
-			<weight unit="LBS"> 65000.0000 </weight>
+			<weight unit="LBS"> 0.0000 </weight>
 			<location name="Tech ops" unit="IN">
 				<x>  	0.00 </x>
 				<y>     0.00 </y>
