@@ -10,7 +10,8 @@
 		<pitch-deg>-1.0</pitch-deg>
 	</offsets>
 
-	<!-- Livery System for MP -->
+	
+	<!--Disables the Livery System on the Pegasus
 	<nasal>
 		<load>
 			var rplayer = cmdarg();
@@ -44,8 +45,10 @@
 			livery_update.stop();
 		</unload>
 	</nasal>
+	-->
 
 	<!-- Livery Selection Animation -->
+	<!--
 	<animation>
 		<type>material</type>
 		<object-name>Fuselage</object-name>
@@ -62,8 +65,8 @@
 		<property-base>sim/model/livery</property-base>
 		<texture-prop>texture</texture-prop>
 		<texture>Pegasus.png</texture>
-	</animation>
-	<!-- Livery System -->
+		</animation>
+		-->
 
 	<!-- Shaders -->
 	<effect>
