@@ -18,7 +18,7 @@
 		<author>Peter Brendt (JSB, systems), Liam Gathercole and Isaias V. Prestes (3D)</author>
 
 		<aircraft-version>V00.00.00</aircraft-version>
-		<status>Alpha</status>
+		<status>alpha</status>
 
 		<rating>
 			<FDM type="int">     0 </FDM>

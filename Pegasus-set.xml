@@ -15,10 +15,10 @@
 	<sim>
 
 		<description>KC-46 Pegasus</description>
-		<author>Peter Brendt (JSB, systems), Liam Gathercole, Isaias V. Prestes (3D), Isreal Hernandez (3D for KC-46)</author>
+		<author>Peter Brendt (JSB, systems), Liam Gathercole, Isaias V. Prestes (3D), IAHM-COL (3D for KC-46)</author>
 
 		<aircraft-version>V00.00.00</aircraft-version>
-		<status>Alpha</status>
+		<status>alpha</status>
 
 		<rating>
 			<FDM type="int">     0 </FDM>
