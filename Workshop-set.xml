@@ -6,7 +6,7 @@
 		Peter Brendt (Jabberwocky)
 
 		based on:
-		3D model taken from Emanuel Baranger's Ju-390 (on Yasim)
+		3D model taken from Liman Gathercole and Isaias Prestes (on Yasim)
 		************************************************************************
 	-->
 
@@ -18,7 +18,7 @@
 		<author>Peter Brendt (JSB, systems), Liam Gathercole and Isaias V. Prestes (3D)</author>
 
 		<aircraft-version>V00.00.00</aircraft-version>
-		<status>Alpha</status>
+		<status>alpha</status>
 
 		<rating>
 			<FDM type="int">     0 </FDM>

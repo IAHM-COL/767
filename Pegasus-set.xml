@@ -6,7 +6,7 @@
 		Peter Brendt (Jabberwocky)
 
 		based on:
-		3D model by Israel Hernandez (IAHM-COL)
+		3D model modified by Israel Hernandez (IAHM-COL), based on work by Liam Gathercole and Isaias Prestes
 		************************************************************************
 	-->
 
@@ -15,10 +15,10 @@
 	<sim>
 
 		<description>KC-46 Pegasus</description>
-		<author>Peter Brendt (JSB, systems), Liam Gathercole, Isaias V. Prestes (3D), Isreal Hernandez (3D for KC-46)</author>
+		<author>Peter Brendt (JSB, systems), Liam Gathercole, Isaias V. Prestes (3D), IAHM-COL (3D for KC-46)</author>
 
 		<aircraft-version>V00.00.00</aircraft-version>
-		<status>Alpha</status>
+		<status>alpha</status>
 
 		<rating>
 			<FDM type="int">     0 </FDM>
@@ -33,7 +33,7 @@
 
 		<!-- Splash screen while loading -->
 		<startup>
-			<splash-texture>Aircraft/767/splash.png</splash-texture>
+			<splash-texture>Aircraft/767/pegasus-splash.png</splash-texture>
 		</startup>
 
 		<!-- Settings for model -->
