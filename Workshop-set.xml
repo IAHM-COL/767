@@ -10,7 +10,7 @@
 		************************************************************************
 	-->
 
-	<PropertyList include="Interface.xml">
+	<PropertyList include="Aircraft/JPack/Interface.xml">
 
 	<sim>
 
