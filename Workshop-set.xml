@@ -6,11 +6,11 @@
 		Peter Brendt (Jabberwocky)
 
 		based on:
-		3D model taken from Emanuel Baranger's Ju-390 (on Yasim)
+		3D model taken from Liman Gathercole and Isaias Prestes (on Yasim)
 		************************************************************************
 	-->
 
-	<PropertyList include="Aircraft/JPack/Interface.xml">
+	<PropertyList include="Interface.xml">
 
 	<sim>
 

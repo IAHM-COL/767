@@ -6,11 +6,11 @@
 		Peter Brendt (Jabberwocky)
 
 		based on:
-		3D model modified by Israel Hernandez (IAHM-COL), based on work by Liam Gathercole
+		3D model modified by Israel Hernandez (IAHM-COL), based on work by Liam Gathercole and Isaias Prestes
 		************************************************************************
 	-->
 
-	<PropertyList include="Aircraft/JPack/Interface.xml">
+	<PropertyList include="Interface.xml">
 
 	<sim>
 
