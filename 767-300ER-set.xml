@@ -6,7 +6,7 @@
 		Peter Brendt (Jabberwocky)
 
 		based on:
-		3D model by Israel Hernandez (IAHM-COL)
+		3D model taken from Emanuel Baranger's Ju-390 (on Yasim)
 		************************************************************************
 	-->
 
@@ -14,8 +14,8 @@
 
 	<sim>
 
-		<description>KC-46 Pegasus</description>
-		<author>Peter Brendt (JSB, systems), Liam Gathercole, Isaias V. Prestes (3D), Isreal Hernandez (3D for KC-46)</author>
+		<description>767-300ER</description>
+		<author>Peter Brendt (JSB, systems), Liam Gathercole and Isaias V. Prestes (3D)</author>
 
 		<aircraft-version>V00.00.00</aircraft-version>
 		<status>Alpha</status>
@@ -28,7 +28,7 @@
 		</rating>
 
 		<flight-model>jsb</flight-model>
-  		<aero>Pegasus</aero>
+  		<aero>767-300ER</aero>
 		<engine>PW4062</engine>
 
 		<!-- Splash screen while loading -->
@@ -39,7 +39,7 @@
 		<!-- Settings for model -->
 		<model>
 			<!-- Path to main model file -->
-			<path>Aircraft/767/Models/Pegasus.xml</path>
+			<path>Aircraft/767/Models/767-300ER.xml</path>
 
 			<!-- JPack: push forces for Voodoomaster Pushback -->
 			<pushback>
@@ -345,7 +345,7 @@
 		<menubar>
 			<default>
 				<menu n="100">
-					<label>Pegasus</label>
+					<label>FlyingWorkshop</label>
 					<enabled type="bool">true</enabled>
 
 					<item>
@@ -552,16 +552,24 @@
 
 		<weight n="2">
 			<!-- AirVac team (KC-46) or TechTeam (Workshop) -->
-			<name>AirVac Team</name>
+			<name>Tech ops</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]" />
 			<min-lb type="double">    0</min-lb>
 			<max-lb type="double"> 3000</max-lb>
 		</weight>
 
 		<weight n="3">
-			<!-- Spare parts -->
-			<name>Load</name>
+			<!-- 3 operators -->
+			<name>Radar ops</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]" />
+			<min-lb type="double">    0</min-lb>
+			<max-lb type="double">  600</max-lb>
+		</weight>
+
+		<weight n="4">
+			<!-- Spare parts -->
+			<name>Spare parts</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[4]" />
 			<min-lb type="double">    0</min-lb>
 			<max-lb type="double">65000</max-lb>
 		</weight>
@@ -601,17 +609,6 @@
 			<anti-ice type="string">controls/ice/eng2/auto</anti-ice>
 		</eng2>
 	</controls>
-
-	<!-- Systems parallel to sim -->
-	<systems>
-		<path>Aircraft/767/Systems/767.xml</path>
-		<electrical>
-			<path>Aircraft/Generic/generic-electrical.xml</path>
-		</electrical>
-		<autopilot>
-			<path>Aircraft/JPack/Voodoomaster/Systems/SYS8_0_autopilot.xml</path>
-		</autopilot>
-	</systems>
 
 	<!-- #### ai submodels -->
 
@@ -678,6 +675,13 @@
 		<pushback>
 			<activated type="bool">false</activated>
 		</pushback>
+		<radar n="0">
+			<device type="string">Sentry</device>
+			<antenna-x type="float">1.0</antenna-x>
+			<antenna-y type="float">1.0</antenna-y>
+			<antenna-z type="float">1.0</antenna-z>
+			<antenna-r type="bool">true</antenna-r>
+		</radar>
 		<refuel n="0">
 			<device type="string">RefuelBoom</device>
 			<boom-angle type="float">0.0</boom-angle>
@@ -715,20 +719,6 @@
 	</multiplay>
 
 	<tanker type="bool">true</tanker>
-
-	<autopilot>
-
-		<settings>
-			<kts-mach-select type="string">kts</kts-mach-select>
-			<max-pitch type="float">6.0</max-pitch>
-			<bank-angle-limit-deg type="int">45</bank-angle-limit-deg>
-		</settings>
-
-		<internal>
-			<max-pitch type="float">6.0</max-pitch>
-		</internal>
-
-	</autopilot>
 
 	<nasal>
 		<b767>

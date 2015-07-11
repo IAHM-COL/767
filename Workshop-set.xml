@@ -3,10 +3,10 @@
 	<!-- 
 		************************************************************************
 		Boeing 767
-		Peter Brendt (Jabberwocky)
+		Peter Brendt (Jabberwocky) and Isreal Hernandez (IAHM-COL)
 
 		based on:
-		3D model taken from Emanuel Baranger's Ju-390 (on Yasim)
+		3D model taken from Isaias Prestes' 767-300 (on Yasim)
 		************************************************************************
 	-->
 
@@ -28,7 +28,7 @@
 		</rating>
 
 		<flight-model>jsb</flight-model>
-  		<aero>767-300JWocky</aero>
+  		<aero>Workshop</aero>
 		<engine>PW4062</engine>
 
 		<!-- Splash screen while loading -->
@@ -39,7 +39,7 @@
 		<!-- Settings for model -->
 		<model>
 			<!-- Path to main model file -->
-			<path>Aircraft/767/Models/FlyingWorkshop.xml</path>
+			<path>Aircraft/767/Models/Workshop.xml</path>
 
 			<!-- JPack: push forces for Voodoomaster Pushback -->
 			<pushback>
@@ -484,6 +484,17 @@
 			</default>
 		</menubar>
 
+		<!-- Systems -->
+		<systems>
+			<path>Aircraft/767/Systems/767.xml</path>
+			<electrical>
+				<path>Aircraft/Generic/generic-electrical.xml</path>
+			</electrical>
+			<autopilot>
+				<path>Aircraft/JPack/Voodoomaster/Systems/SYS8_0_autopilot.xml</path>
+			</autopilot>
+		</systems>
+
 	</sim>
 
 	<consumables>
@@ -599,17 +610,6 @@
 		</eng2>
 	</controls>
 
-	<!-- Systems parallel to sim -->
-	<systems>
-		<path>Aircraft/767/Systems/767.xml</path>
-		<electrical>
-			<path>Aircraft/Generic/generic-electrical.xml</path>
-		</electrical>
-		<autopilot>
-			<path>Aircraft/JPack/Voodoomaster/Systems/SYS8_0_autopilot.xml</path>
-		</autopilot>
-	</systems>
-
 	<!-- #### ai submodels -->
 
 	<input>
@@ -667,7 +667,25 @@
 			</key -->
 		</keyboard>
 	</input>
-  
+    
+	<!-- Autopilot initialization -->
+	<autopilot>
+
+		<settings>
+			<kts-mach-select type="string">kts</kts-mach-select>
+			<max-pitch type="float"> 6.0</max-pitch>
+			<min-pitch type="float">-4.0</min-pitch>
+			<bank-angle-limit-deg type="int">35</bank-angle-limit-deg>
+		</settings>
+
+		<internal>
+			<target-pitch-deg type="float">0.00</target-pitch-deg>
+			<max-pitch type="float"> 6.0</max-pitch>
+			<min-pitch type="float">-4.0</min-pitch>
+		</internal>
+
+	</autopilot>
+
 	<!-- Voodoomaster plane specific initializations -->
 	<voodoomaster>
 		<steering-wheel type="int">0</steering-wheel>

@@ -28,7 +28,7 @@
 		</rating>
 
 		<flight-model>jsb</flight-model>
-  		<aero>Pegasus</aero>
+  		<aero>KC46</aero>
 		<engine>PW4062</engine>
 
 		<!-- Splash screen while loading -->

@@ -14,7 +14,7 @@
 
 	<sim>
 
-		<description>KC-46 Pegasus</description>
+		<description>KC-767TT</description>
 		<author>Peter Brendt (JSB, systems), Liam Gathercole, Isaias V. Prestes (3D), Isreal Hernandez (3D for KC-46)</author>
 
 		<aircraft-version>V00.00.00</aircraft-version>
@@ -28,7 +28,7 @@
 		</rating>
 
 		<flight-model>jsb</flight-model>
-  		<aero>Pegasus</aero>
+  		<aero>KC46</aero>
 		<engine>PW4062</engine>
 
 		<!-- Splash screen while loading -->
@@ -39,7 +39,7 @@
 		<!-- Settings for model -->
 		<model>
 			<!-- Path to main model file -->
-			<path>Aircraft/767/Models/Pegasus.xml</path>
+			<path>Aircraft/767/Models/KC-767TT.xml</path>
 
 			<!-- JPack: push forces for Voodoomaster Pushback -->
 			<pushback>
