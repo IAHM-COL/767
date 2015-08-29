@@ -14,30 +14,10 @@
 	<nasal>
 		<load>
 			var rplayer = cmdarg();
-			# Set up property aliases for animations.
-			rplayer.getNode("voodoomaster/radar[0]/antenna-r", 1).alias(rplayer.getNode("sim/multiplay/generic/int[10]"));
+			# Set up property aliases for animations. JUST AS REMINDER!!!!
+			# rplayer.getNode("voodoomaster/radar[0]/antenna-r", 1).alias(rplayer.getNode("sim/multiplay/generic/int[10]"));
 
-  			var livery_update = aircraft.livery_update.new("Aircraft/767/Models/Liveries", 10);
-
-			setprop("voodoomaster/radar[0]/device", "Sentry");
-			setprop("voodoomaster/radar[0]/antenna-x", 1.0);
-			setprop("voodoomaster/radar[0]/antenna-y", 1.0);
-			setprop("voodoomaster/radar[0]/antenna-z", 1.0);
-			setprop("voodoomaster/radar[0]/antenna-r", 1);
-
-			setprop("voodoomaster/refuel[0]/device", "RefuelBoom");
-			setprop("voodoomaster/refuel[0]/boom-angle", 0.0);
-			setprop("voodoomaster/refuel[0]/boom-extend", 0.0);
-
-			setprop("voodoomaster/refuel[1]/device", "RefuelProbe");
-			setprop("voodoomaster/refuel[1]/probe-extended", 0);
-
-			setprop("voodoomaster/refuel[2]/device", "RefuelProbe");
-			setprop("voodoomaster/refuel[2]/probe-extended", 0);
-
-			setprop("voodoomaster/refuel[3]/device", "RefuelProbe");
-			setprop("voodoomaster/refuel[3]/probe-extended", 0);
-
+  			var livery_update = aircraft.livery_update.new("Aircraft/767/Models/Liveries/767-300ER", 10);
 		</load>
 
 		<unload>
@@ -90,7 +70,7 @@
 		</offsets>
 	</model>
 
-	<!-- Une ombre pour OSG -->
+	<!-- A shadow for OSG -->
 	<model>
 		<name>shadowOSG</name>
 		<path>Aircraft/767/Models/shadow.xml</path>
@@ -117,7 +97,7 @@
 	<!-- Gear Animation -->
 	<!-- ############## -->
 
-	    <!--       Left Gear      -->
+	<!--       Left Gear      -->
 	<animation>
 		<type>rotate</type>
 		<object-name>left_gear</object-name>
@@ -516,8 +496,7 @@
 		</offsets>
 	</model>
 
-<!-- #### -->
-
+	<!-- #### -->
 	<model>
 		<name>Bus</name>
 		<path>Aircraft/767/Models/Operations/Bus/bus.xml</path>
@@ -543,126 +522,124 @@
 		<name>GPU truck long</name>
 		<path>Aircraft/767/Models/Operations/Baggage/chariot.xml</path>
 		<condition>
-            <and>
-                <property>controls/switches/gpu</property>
-                <less-than>
-                    <property>velocities/airspeed-kt</property>
-                    <value>10</value>
-                </less-than>
-            </and>
-        </condition>
-        <offsets>
-            <x-m>12</x-m>
-            <y-m> 18</y-m>
-            <z-m>-5.9</z-m>
-            <pitch-deg>0</pitch-deg>
-            <heading-deg>90</heading-deg>
-        </offsets>
-    </model>
+			<and>
+				<property>controls/switches/gpu</property>
+                		<less-than>
+					<property>velocities/airspeed-kt</property>
+					<value>10</value>
+				</less-than>
+			</and>
+		</condition>
+		<offsets>
+			<x-m>12</x-m>
+			<y-m> 18</y-m>
+			<z-m>-5.9</z-m>
+			<pitch-deg>0</pitch-deg>
+			<heading-deg>90</heading-deg>
+		</offsets>
+	</model>
 
-    <!-- Engine Safety Cones Left -->
+	<!-- Engine Safety Cones Left -->
+	<model>
+		<name>Cone</name>
+		<path>Aircraft/767/Models/Operations/Cones/cone.xml</path>
+		<condition>
+			<and>
+				<property>controls/switches/cones</property>
+				<less-than>
+					<property>velocities/airspeed-kt</property>
+					<value>15</value>
+				</less-than>
+			</and>
+		</condition>
+		<offsets>
+			<x-m>-9</x-m>
+			<y-m>-7.5</y-m>
+			<z-m>-6.1</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
 
-    <model>
-        <name>Cone</name>
-        <path>Aircraft/767/Models/Operations/Cones/cone.xml</path>
-        <condition>
-            <and>
-                <property>controls/switches/cones</property>
-                <less-than>
-                    <property>velocities/airspeed-kt</property>
-                    <value>15</value>
-                </less-than>
-            </and>
-        </condition>
-        <offsets>
-            <x-m>-9</x-m>
-            <y-m>-7.5</y-m>
-            <z-m>-6.1</z-m>
-            <pitch-deg>0</pitch-deg>
-        </offsets>
-    </model>
+	<model>
+		<name>Cone</name>
+		<path>Aircraft/767/Models/Operations/Cones/cone.xml</path>
+		<condition>
+			<and>
+				<property>controls/switches/cones</property>
+				<less-than>
+					<property>velocities/airspeed-kt</property>
+					<value>15</value>
+				</less-than>
+			</and>
+		</condition>
+		<offsets>
+			<x-m>-8.6</x-m>
+			<y-m>-6.5</y-m>
+			<z-m>-6.1</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
 
-    <model>
-        <name>Cone</name>
-        <path>Aircraft/767/Models/Operations/Cones/cone.xml</path>
-        <condition>
-            <and>
-                <property>controls/switches/cones</property>
-                <less-than>
-                    <property>velocities/airspeed-kt</property>
-                    <value>15</value>
-                </less-than>
-            </and>
-        </condition>
-        <offsets>
-            <x-m>-8.6</x-m>
-            <y-m>-6.5</y-m>
-            <z-m>-6.1</z-m>
-            <pitch-deg>0</pitch-deg>
-        </offsets>
-    </model>
+	<model>
+		<name>Cone</name>
+		<path>Aircraft/767/Models/Operations/Cones/cone.xml</path>
+		<condition>
+			<and>
+				<property>controls/switches/cones</property>
+				<less-than>
+					<property>velocities/airspeed-kt</property>
+					<value>15</value>
+				</less-than>
+			</and>
+		</condition>
+		<offsets>
+			<x-m>-8.6</x-m>
+			<y-m>-8.5</y-m>
+			<z-m>-6.1</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
 
-    <model>
-        <name>Cone</name>
-        <path>Aircraft/767/Models/Operations/Cones/cone.xml</path>
-        <condition>
-            <and>
-                <property>controls/switches/cones</property>
-                <less-than>
-                    <property>velocities/airspeed-kt</property>
-                    <value>15</value>
-                </less-than>
-            </and>
-        </condition>
-        <offsets>
-            <x-m>-8.6</x-m>
-            <y-m>-8.5</y-m>
-            <z-m>-6.1</z-m>
-            <pitch-deg>0</pitch-deg>
-        </offsets>
-    </model>
+	<!-- Engine Safety Cones Right -->
+	<model>
+		<name>Cone</name>
+		<path>Aircraft/767/Models/Operations/Cones/cone.xml</path>
+		<condition>
+			<and>
+				<property>controls/switches/cones</property>
+				<less-than>
+					<property>velocities/airspeed-kt</property>
+					<value>15</value>
+				</less-than>
+			</and>
+		</condition>
+		<offsets>
+			<x-m>-9</x-m>
+			<y-m>7.5</y-m>
+			<z-m>-6.1</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
 
-    <!-- Engine Safety Cones Right -->
-
-    <model>
-        <name>Cone</name>
-        <path>Aircraft/767/Models/Operations/Cones/cone.xml</path>
-        <condition>
-            <and>
-                <property>controls/switches/cones</property>
-                <less-than>
-                    <property>velocities/airspeed-kt</property>
-                    <value>15</value>
-                </less-than>
-            </and>
-        </condition>
-        <offsets>
-            <x-m>-9</x-m>
-            <y-m>7.5</y-m>
-            <z-m>-6.1</z-m>
-            <pitch-deg>0</pitch-deg>
-        </offsets>
-    </model>
-
-    <model>
-        <name>Cone</name>
-        <path>Aircraft/767/Models/Operations/Cones/cone.xml</path>
-        <condition>
-            <and>
-                <property>controls/switches/cones</property>
-                <less-than>
-                    <property>velocities/airspeed-kt</property>
-                    <value>15</value>
-                </less-than>
-            </and>
-        </condition>
-        <offsets>
-            <x-m>-8.6</x-m>
-            <y-m>6.5</y-m>
-            <z-m>-6.1</z-m>
-            <pitch-deg>0</pitch-deg>
-        </offsets>
-    </model>
+	<model>
+		<name>Cone</name>
+		<path>Aircraft/767/Models/Operations/Cones/cone.xml</path>
+		<condition>
+			<and>
+				<property>controls/switches/cones</property>
+				<less-than>
+					<property>velocities/airspeed-kt</property>
+					<value>15</value>
+				</less-than>
+			</and>
+		</condition>
+		<offsets>
+			<x-m>-8.6</x-m>
+			<y-m>6.5</y-m>
+			<z-m>-6.1</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
 
     <model>
         <name>Cone</name>
@@ -684,722 +661,656 @@
         </offsets>
     </model>
 
-<!-- Takeoff/Landing Engine Moisture -->
-<!--
-<model>
-<name>Left</name>
-<path>Aircraft/767/Models/effects/exhaust.xml</path>
-<condition>
-<and>
-<greater-than>
-<property>position/altitude-agl-ft</property>
-<value>1</value>
-</greater-than>
-<and>
-<greater-than>
-<property>environment/relative-humidity</property>
-<value>45</value>
-</greater-than>
-<and>
-<less-than-equals>
-<property>position/altitude-agl-ft</property>
-<value>75</value>
-</less-than-equals>
-<and>
-<less-than-equals>
-<property>/sim/time/sun-angle-rad</property>
-<value>1.63</value>
-</less-than-equals>
-<and>
-<greater-than>
-<property>engines/engine[0]/rpm</property>
-<value>90</value>
-</greater-than>
-<not>
-<property>sim/crashed</property>
-</not>
-</and>
-</and>
-</and>
-</and>
-</and>
-</condition>
-<offsets>
-<x-m>-7.0</x-m>
-<y-m>-7.77</y-m>
-<z-m>-4.4</z-m>
-<pitch-deg>0</pitch-deg>
-</offsets>
-</model>
+	<!-- Takeoff/Landing Engine Moisture -->
+	<!--
+	<model>
+		<name>Left</name>
+		<path>Aircraft/767/Models/effects/exhaust.xml</path>
+		<condition>
+			<and>
+				<greater-than>
+					<property>position/altitude-agl-ft</property>
+					<value>1</value>
+				</greater-than>
+				<greater-than>
+					<property>environment/relative-humidity</property>
+					<value>45</value>
+				</greater-than>
+				<less-than-equals>
+					<property>position/altitude-agl-ft</property>
+					<value>75</value>
+				</less-than-equals>
+				<less-than-equals>
+					<property>/sim/time/sun-angle-rad</property>
+					<value>1.63</value>
+				</less-than-equals>
+				<greater-than>
+					<property>engines/engine[0]/rpm</property>
+					<value>90</value>
+				</greater-than>
+				<not>
+					<property>sim/crashed</property>
+				</not>
+			</and>
+		</condition>
+		<offsets>
+			<x-m>-7.0</x-m>
+			<y-m>-7.77</y-m>
+			<z-m>-4.4</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
 
-<model>
-<name>Right</name>
-<path>Aircraft/767/Models/effects/exhaust.xml</path>
-<condition>
-<and>
-<greater-than>
-<property>position/altitude-agl-ft</property>
-<value>1</value>
-</greater-than>
-<and>
-<greater-than>
-<property>environment/relative-humidity</property>
-<value>45</value>
-</greater-than>
-<and>
-<less-than-equals>
-<property>position/altitude-agl-ft</property>
-<value>75</value>
-</less-than-equals>
-<and>
-<less-than-equals>
-<property>/sim/time/sun-angle-rad</property>
-<value>1.63</value>
-</less-than-equals>
-<and>
-<greater-than>
-<property>engines/engine[0]/rpm</property>
-<value>90</value>
-</greater-than>
-<not>
-<property>sim/crashed</property>
-</not>
-</and>
-</and>
-</and>
-</and>
-</and>
-</condition>
-<offsets>
-<x-m>-7.0</x-m>
-<y-m>7.77</y-m>
-<z-m>-4.4</z-m>
-<pitch-deg>0</pitch-deg>
-</offsets>
-</model>
- -->
+	<model>
+		<name>Right</name>
+		<path>Aircraft/767/Models/effects/exhaust.xml</path>
+		<condition>
+			<and>
+				<greater-than>
+					<property>position/altitude-agl-ft</property>
+					<value>1</value>
+				</greater-than>
+				<greater-than>
+					<property>environment/relative-humidity</property>
+					<value>45</value>
+				</greater-than>
+				<less-than-equals>
+					<property>position/altitude-agl-ft</property>
+					<value>75</value>
+				</less-than-equals>
+				<less-than-equals>
+					<property>/sim/time/sun-angle-rad</property>
+					<value>1.63</value>
+				</less-than-equals>
+				<greater-than>
+					<property>engines/engine[0]/rpm</property>
+					<value>90</value>
+				</greater-than>
+				<not>
+					<property>sim/crashed</property>
+				</not>
+			</and>
+		</condition>
+		<offsets>
+			<x-m>-7.0</x-m>
+			<y-m>7.77</y-m>
+			<z-m>-4.4</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+	-->
  
-<!-- ############### -->
-<!-- Tubofan Exhaust -->
-<!-- ############### -->
-    <model>
-        <name>Left Tubofan Exhaust</name>
-        <path>Aircraft/767/Models/Effects/Exaust/Exhaust.xml</path>
-        <offsets>
-            <x-m>-7.0</x-m>
-            <y-m>-7.77</y-m>
-            <z-m>-4.4</z-m>
-            <pitch-deg>0</pitch-deg>
-        </offsets>
-    </model>
+	<!-- ############### -->
+	<!-- Tubofan Exhaust -->
+	<!-- ############### -->
+	<model>
+		<name>Left Tubofan Exhaust</name>
+		<path>Aircraft/767/Models/Effects/Exaust/Exhaust.xml</path>
+		<offsets>
+			<x-m>-7.0</x-m>
+			<y-m>-7.77</y-m>
+			<z-m>-4.4</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
 
-    <model>
-        <name>Right Tubofan Exhaust</name>
-        <path>Aircraft/767/Models/Effects/Exaust/Exhaust.xml</path>
-        <offsets>
-            <x-m>-7.0</x-m>
-            <y-m> 7.77</y-m>
-            <z-m>-4.4</z-m>
-            <pitch-deg>0</pitch-deg>
-        </offsets>
-    </model>
+	<model>
+		<name>Right Tubofan Exhaust</name>
+		<path>Aircraft/767/Models/Effects/Exaust/Exhaust.xml</path>
+		<offsets>
+			<x-m>-7.0</x-m>
+			<y-m> 7.77</y-m>
+			<z-m>-4.4</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
  
-<!-- ################ -->
-<!-- Tubofan Contrail -->
-<!-- ################ -->
-    <model>
-        <name>Left Tubofan Contrail</name>
-        <path>Aircraft/767/Models/Effects/Contrail/contrail.xml</path>
-        <offsets>
-            <x-m>8.0</x-m>
-            <y-m>-7.77</y-m>
-            <z-m>-4.4</z-m>
-            <pitch-deg>0</pitch-deg>
-        </offsets>
-    </model>
+	<!-- ################ -->
+	<!-- Tubofan Contrail -->
+	<!-- ################ -->
+	<model>
+		<name>Left Tubofan Contrail</name>
+		<path>Aircraft/767/Models/Effects/Contrail/contrail.xml</path>
+		<offsets>
+			<x-m>8.0</x-m>
+			<y-m>-7.77</y-m>
+			<z-m>-4.4</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
 
-    <model>
-        <name>Right Tubofan Contrail</name>
-        <path>Aircraft/767/Models/Effects/Contrail/contrail1.xml</path>
-        <offsets>
-            <x-m>8.0</x-m>
-            <y-m> 7.77</y-m>
-            <z-m>-4.4</z-m>
-            <pitch-deg>0</pitch-deg>
-        </offsets>
-    </model>
+	<model>
+		<name>Right Tubofan Contrail</name>
+		<path>Aircraft/767/Models/Effects/Contrail/contrail1.xml</path>
+		<offsets>
+			<x-m>8.0</x-m>
+			<y-m> 7.77</y-m>
+			<z-m>-4.4</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
  
-<!-- ###### -->
-<!-- Rudder -->
-<!-- ###### -->
- <animation>
-  <type>rotate</type>
-  <object-name>VRudder</object-name>
-  <property>controls/flight/rudder</property>
-  <factor>35</factor>
-  <offset-deg>0</offset-deg>   
-	  <axis>
-	     <x1-m> 22.2651</x1-m>
-	     <y1-m>0.0</y1-m>
-	     <z1-m>0.3841</z1-m>
-	     <x2-m> 27.7519</x2-m>
-	     <y2-m>0.0</y2-m>
-	     <z2-m>9.09162</z2-m>
-	  </axis>
- </animation>
+	<!-- ###### -->
+	<!-- Rudder -->
+	<!-- ###### -->
+	<animation>
+		<type>rotate</type>
+		<object-name>VRudder</object-name>
+		<property>controls/flight/rudder</property>
+		<factor>35</factor>
+		<offset-deg>0</offset-deg>   
+		<axis>
+			<x1-m> 22.2651</x1-m>
+			<y1-m>0.0</y1-m>
+			<z1-m>0.3841</z1-m>
+			<x2-m> 27.7519</x2-m>
+			<y2-m>0.0</y2-m>
+			<z2-m>9.09162</z2-m>
+		</axis>
+	</animation>
 
-<!-- ########## -->
-<!-- Elevators -->
-<!-- ########## -->
- <animation>
-  <type>rotate</type>
-  <object-name>RHelev</object-name>
-  <property>controls/flight/elevator</property>
-  <factor>-10</factor>
-  <offset-deg>0</offset-deg>   
-	  <axis>
-	     <x1-m> 26.0422</x1-m>
-	     <y1-m> 7.99429</y1-m>
-	     <z1-m> -0.34486</z1-m>
-	     <x2-m> 23.5044</x2-m>
-	     <y2-m> 1.27994</y2-m>
-	     <z2-m> -1.16834</z2-m>
-	  </axis>
- </animation>
+	<!-- ########## -->
+	<!-- Elevators -->
+	<!-- ########## -->
+	<animation>
+		<type>rotate</type>
+		<object-name>RHelev</object-name>
+		<property>controls/flight/elevator</property>
+		<factor>-10</factor>
+		<offset-deg>0</offset-deg>   
+		<axis>
+			<x1-m> 26.0422</x1-m>
+			<y1-m> 7.99429</y1-m>
+			<z1-m> -0.34486</z1-m>
+			<x2-m> 23.5044</x2-m>
+			<y2-m> 1.27994</y2-m>
+			<z2-m> -1.16834</z2-m>
+		</axis>
+	</animation>
 
- <animation>
-  <type>rotate</type>
-  <object-name>LHelev</object-name>
-  <property>controls/flight/elevator</property>
-  <factor>10</factor>
-  <offset-deg>0</offset-deg>   
-	  <axis>
-	     <x1-m> 26.0422</x1-m>
-	     <y1-m>-7.99429</y1-m>
-	     <z1-m> -0.34486</z1-m>
-	     <x2-m> 23.5044</x2-m>
-	     <y2-m>-1.27994</y2-m>
-	     <z2-m> -1.16834</z2-m>
-	  </axis>
- </animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>LHelev</object-name>
+		<property>controls/flight/elevator</property>
+		<factor>10</factor>
+		<offset-deg>0</offset-deg>   
+		<axis>
+			<x1-m> 26.0422</x1-m>
+			<y1-m>-7.99429</y1-m>
+			<z1-m> -0.34486</z1-m>
+			<x2-m> 23.5044</x2-m>
+			<y2-m>-1.27994</y2-m>
+			<z2-m> -1.16834</z2-m>
+		</axis>
+	</animation>
  
-<!-- ######## -->
-<!-- Ailerons -->
-<!-- ######## -->
-	<!-- Internal -->
-  <animation>
-  <type>rotate</type>
-  <object-name>aileron_int_L</object-name>
-  <property>controls/flight/aileron</property>
-  <factor>-30</factor>
-  <axis>
-     <x1-m> 2.0559</x1-m>
-     <y1-m>-7.22886</y1-m>
-     <z1-m>-2.48597</z1-m>
-     <x2-m> 3.0258</x2-m>
-     <y2-m>-9.20542</y2-m>
-     <z2-m>-2.33461</z2-m>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>aileron_int_R</object-name>
-  <property>controls/flight/aileron</property>
-  <factor>-30</factor>
-  <axis>
-     <x1-m> 2.0559</x1-m>
-     <y1-m>7.22886</y1-m>
-     <z1-m>-2.48597</z1-m>
-     <x2-m> 3.0258</x2-m>
-     <y2-m>9.20542</y2-m>
-     <z2-m>-2.33461</z2-m>
-  </axis>
- </animation> 
- 
-<!-- Externo -->
-  <animation>
-  <type>rotate</type>
-  <object-name>aileron_ext_L</object-name>
-  <property>controls/flight/aileron</property>
-  <factor>-30</factor>
-  <axis>
-     <x1-m> 6.364</x1-m>
-     <y1-m>-17.8309</y1-m>
-     <z1-m>-1.39036</z1-m>
-     <x2-m> 8.6373</x2-m>
-     <y2-m>-22.928</y2-m>
-     <z2-m>-0.90345</z2-m>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>aileron_ext_R</object-name>
-  <property>controls/flight/aileron</property>
-  <factor>-30</factor>
-  <axis>
-     <x1-m> 6.364</x1-m>
-     <y1-m>17.8309</y1-m>
-     <z1-m>-1.39036</z1-m>
-     <x2-m> 8.6373</x2-m>
-     <y2-m>22.928</y2-m>
-     <z2-m>-0.90345</z2-m>
-  </axis>
- </animation> 
- 
-<!-- ##### -->
-<!-- Flaps -->
-<!-- ##### -->
- <animation>
-  <type>rotate</type>
-  <object-name>flapl</object-name>
-  <property>surface-positions/flap-pos-norm</property>
-  <factor>-30</factor>
-  <axis>
-     <x1-m> 1.9652</x1-m>
-     <y1-m>-2.64224</y1-m>
-     <z1-m>-3.77504</z1-m>
-     <x2-m> 2.0446</x2-m>
-     <y2-m>-7.26919</y2-m>
-     <z2-m>-2.96595</z2-m>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>flapr</object-name>
-  <property>surface-positions/flap-pos-norm</property>
-  <factor>30</factor>
-  <axis>
-     <x1-m> 1.9652</x1-m>
-     <y1-m> 2.64224</y1-m>
-     <z1-m>-3.77504</z1-m>
-     <x2-m> 2.0446</x2-m>
-     <y2-m> 7.26919</y2-m>
-     <z2-m>-2.96595</z2-m>
-  </axis>
- </animation>
- 
- <animation>
-  <type>rotate</type>
-  <object-name>LgomoWingInt</object-name>
-  <property>surface-positions/flap-pos-norm</property>
-  <factor>-30</factor>
-  <axis>
-     <x1-m> 1.9652</x1-m>
-     <y1-m>-2.64224</y1-m>
-     <z1-m>-3.77504</z1-m>
-     <x2-m> 2.0446</x2-m>
-     <y2-m>-7.26919</y2-m>
-     <z2-m>-2.96595</z2-m>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>RgomoWingInt</object-name>
-  <property>surface-positions/flap-pos-norm</property>
-  <factor>30</factor>
-  <axis>
-     <x1-m> 1.9652</x1-m>
-     <y1-m> 2.64224</y1-m>
-     <z1-m>-3.77504</z1-m>
-     <x2-m> 2.0446</x2-m>
-     <y2-m> 7.26919</y2-m>
-     <z2-m>-2.96595</z2-m>
-  </axis>
- </animation>
- 
-<!-- Extreme flaps -->
- <animation>
-  <type>rotate</type>
-  <object-name>flap_ext_L</object-name>
-  <object-name>RgomoWing1b</object-name>
-  <object-name>RgomoWing0b</object-name>
-  <property>surface-positions/flap-pos-norm</property>
-  <factor>-30</factor>
-  <axis>
-     <x1-m> 3.2773</x1-m>
-     <y1-m>-9.22202</y1-m>
-     <z1-m>-2.55506</z1-m>
-     <x2-m> 6.6152</x2-m>
-     <y2-m>-17.5003</y2-m>
-     <z2-m>-1.57581</z2-m>
-  </axis>
- </animation>
-
- <animation>
-  <type>rotate</type>
-  <object-name>flap_ext_R</object-name>
-  <object-name>RgomoWing2b</object-name>
-  <object-name>RgomoWing3b</object-name>
-  <property>surface-positions/flap-pos-norm</property>
-  <factor>30</factor>
-  <axis>
-     <x1-m> 3.2773</x1-m>
-     <y1-m>9.22202</y1-m>
-     <z1-m>-2.55506</z1-m>
-     <x2-m> 6.6152</x2-m>
-     <y2-m>17.5003</y2-m>
-     <z2-m>-1.57581</z2-m>
-  </axis>
- </animation>
- 
-<!-- ############ -->
-<!--  Speedbrake  -->
-<!-- ############ -->
- <animation>
-  <type>rotate</type>
-  <object-name>speedbrakel</object-name>
-  <property>surface-positions/speedbrake-norm</property>
-  <factor>-75</factor>
-  <offset-deg>0</offset-deg>   
-	  <axis>
-	     <x1-m> 1.80099</x1-m>
-	     <y1-m>-6.82084</y1-m>
-	     <z1-m>-2.4767</z1-m>
-	     <x2-m> 1.49268</x2-m>
-	     <y2-m>-3.3113</y2-m>
-	     <z2-m>-3.00889</z2-m>
-	  </axis>
- </animation>  
-
- <animation>
-  <type>rotate</type>
-  <object-name>speedbraker</object-name>
-  <property>surface-positions/speedbrake-norm</property>
-  <factor>75</factor>
-  <offset-deg>0</offset-deg>   
-	  <axis>
-	     <x1-m> 1.80099</x1-m>
-	     <y1-m> 6.82084</y1-m>
-	     <z1-m>-2.4767</z1-m>
-	     <x2-m> 1.49268</x2-m>
-	     <y2-m> 3.3113</y2-m>
-	     <z2-m>-3.00889</z2-m>
-	  </axis>
- </animation>  
- 
- 
- <animation>
-  <type>rotate</type>
-  <object-name>speedbrake_LE</object-name>
-  <property>surface-positions/speedbrake-norm</property>
-  <factor>-75</factor>
-  <offset-deg>0</offset-deg>   
-	  <axis>
-	     <x1-m> 5.0027</x1-m>
-	     <y1-m>-15.3548</y1-m>
-	     <z1-m>-1.59783</z1-m>
-	     <x2-m> 2.75766</x2-m>
-	     <y2-m>-9.66211</y2-m>
-	     <z2-m>-2.22535</z2-m>
-	  </axis>
- </animation>  
-
- <animation>
-  <type>rotate</type>
-  <object-name>speedbrake_RE</object-name>
-  <property>surface-positions/speedbrake-norm</property>
-  <factor>75</factor>
-  <offset-deg>0</offset-deg>   
-	  <axis>
-	     <x1-m> 5.0027</x1-m>
-	     <y1-m>15.3548</y1-m>
-	     <z1-m>-1.59783</z1-m>
-	     <x2-m> 2.75766</x2-m>
-	     <y2-m>9.66211</y2-m>
-	     <z2-m>-2.22535</z2-m>
-	  </axis>
- </animation>  
-
-<!-- ####### -->
-<!--  Slats  -->
-<!-- ####### -->
+	<!-- ######## -->
+	<!-- Ailerons -->
+	<!-- ######## -->
 
 	<!-- Internal -->
- <animation>
-  <type>rotate</type>
-  <object-name>LFflapwing1</object-name>
-  <property>surface-positions/flap-pos-norm</property>
-  <factor>-5</factor>
-  <axis>
-     <x1-m> -0.839765</x1-m>
-     <y1-m>-8.34939</y1-m>
-     <z1-m>-2.73192</z1-m>
-     <x2-m> -4.69483</x2-m>
-     <y2-m>-2.77365</y2-m>
-     <z2-m>-3.33119</z2-m>
-  </axis>
- </animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>aileron_int_L</object-name>
+		<property>controls/flight/aileron</property>
+		<factor>-30</factor>
+		<axis>
+			<x1-m> 2.0559</x1-m>
+			<y1-m>-7.22886</y1-m>
+			<z1-m>-2.48597</z1-m>
+			<x2-m> 3.0258</x2-m>
+			<y2-m>-9.20542</y2-m>
+			<z2-m>-2.33461</z2-m>
+		</axis>
+	</animation>
 
- <animation>
-  <type>rotate</type>
-  <object-name>RFflapwing1</object-name>
-  <property>surface-positions/flap-pos-norm</property>
-  <factor>5</factor>
-  <axis>
-     <x1-m> -0.839765</x1-m>
-     <y1-m> 8.34939</y1-m>
-     <z1-m>-2.73192</z1-m>
-     <x2-m> -4.69483</x2-m>
-     <y2-m> 2.77365</y2-m>
-     <z2-m>-3.33119</z2-m>
-  </axis>
- </animation> 
- 
-<animation> 
-	<type>translate</type> 
-	<object-name>LFflapwing1</object-name> 
-	<property>surface-positions/flap-pos-norm</property>
-	<interpolation>
-	 	<entry>  
-	 		<ind>0</ind>  
-	 		<dep>0.0</dep> 
-	 		</entry> 
-	 	<entry> 
-	 		<ind>1</ind>  
-	 		<dep>0.15</dep> 
-	 	</entry> 
-	 </interpolation> 
-  <axis>
-     <x1-m>-4.15395</x1-m>
-     <y1-m>-4.93814</y1-m>
-     <z1-m>-2.42274</z1-m>
-     <x2-m>-4.568</x2-m>
-     <y2-m>-5.20181</y2-m>
-     <z2-m>-2.57948</z2-m>
-  </axis>
-</animation> 
-
-<animation> 
-	<type>translate</type> 
-	<object-name>RFflapwing1</object-name> 
-	<property>surface-positions/flap-pos-norm</property>
-	<interpolation>
-	 	<entry>  
-	 		<ind>0</ind>  
-	 		<dep>0.0</dep> 
-	 		</entry> 
-	 	<entry> 
-	 		<ind>1</ind>  
-	 		<dep>0.15</dep> 
-	 	</entry> 
-	 </interpolation> 
-  <axis>
-     <x1-m>-4.15395</x1-m>
-     <y1-m>4.93814</y1-m>
-     <z1-m>-2.42274</z1-m>
-     <x2-m>-4.568</x2-m>
-     <y2-m>5.20181</y2-m>
-     <z2-m>-2.57948</z2-m>
-  </axis>
-</animation> 
+	<animation>
+		<type>rotate</type>
+		<object-name>aileron_int_R</object-name>
+		<property>controls/flight/aileron</property>
+		<factor>-30</factor>
+		<axis>
+			<x1-m> 2.0559</x1-m>
+			<y1-m>7.22886</y1-m>
+			<z1-m>-2.48597</z1-m>
+			<x2-m> 3.0258</x2-m>
+			<y2-m>9.20542</y2-m>
+			<z2-m>-2.33461</z2-m>
+		</axis>
+	</animation> 
  
 	<!-- External -->
- <animation>
-  <type>rotate</type>
-  <object-name>LFflapwing2</object-name>
-  <property>surface-positions/flap-pos-norm</property>
-  <factor>-10</factor>
-  <axis>
-     <x1-m> 6.8506</x1-m>
-     <y1-m>-22.8474</y1-m>
-     <z1-m>-0.93226</z1-m>
-     <x2-m> -2.7067</x2-m>
-     <y2-m>-8.3356</y2-m>
-     <z2-m>-2.42005</z2-m>
-  </axis>
- </animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>aileron_ext_L</object-name>
+		<property>controls/flight/aileron</property>
+		<factor>-30</factor>
+		<axis>
+			<x1-m> 6.364</x1-m>
+			<y1-m>-17.8309</y1-m>
+			<z1-m>-1.39036</z1-m>
+			<x2-m> 8.6373</x2-m>
+			<y2-m>-22.928</y2-m>
+			<z2-m>-0.90345</z2-m>
+		</axis>
+	</animation>
 
- <animation>
-  <type>rotate</type>
-  <object-name>RFflapwing2</object-name>
-  <property>surface-positions/flap-pos-norm</property>
-  <factor>10</factor>
-  <axis>
-     <x1-m> 6.8506</x1-m>
-     <y1-m>22.8474</y1-m>
-     <z1-m>-0.93226</z1-m>
-     <x2-m> -2.7067</x2-m>
-     <y2-m>8.3356</y2-m>
-     <z2-m>-2.42005</z2-m>
-  </axis>
- </animation> 
+	<animation>
+		<type>rotate</type>
+		<object-name>aileron_ext_R</object-name>
+		<property>controls/flight/aileron</property>
+		<factor>-30</factor>
+		<axis>
+			<x1-m> 6.364</x1-m>
+			<y1-m>17.8309</y1-m>
+			<z1-m>-1.39036</z1-m>
+			<x2-m> 8.6373</x2-m>
+			<y2-m>22.928</y2-m>
+			<z2-m>-0.90345</z2-m>
+		</axis>
+	</animation> 
  
-<animation> 
-	<type>translate</type> 
-	<object-name>LFflapwing2</object-name> 
-	<property>surface-positions/flap-pos-norm</property>
-	<interpolation>
-	 	<entry>  
-	 		<ind>0</ind>  
-	 		<dep>0.0</dep> 
-	 		</entry> 
-	 	<entry> 
-	 		<ind>1</ind>  
-	 		<dep>0.45</dep> 
-	 	</entry> 
-	 </interpolation> 
-  <axis>
-     <x1-m>2.6316</x1-m>
-     <y1-m>-15.2467</y1-m>
-     <z1-m>-1.43764</z1-m>
-     <x2-m>2.14855</x2-m>
-     <y2-m>-15.5299</y2-m>
-     <z2-m>-1.58143</z2-m>
-  </axis>
-</animation> 
+	<!-- ##### -->
+	<!-- Flaps -->
+	<!-- ##### -->
+	<animation>
+		<type>rotate</type>
+		<object-name>flapl</object-name>
+		<property>surface-positions/flap-pos-norm</property>
+		<factor>-30</factor>
+		<axis>
+			<x1-m> 1.9652</x1-m>
+			<y1-m>-2.64224</y1-m>
+			<z1-m>-3.77504</z1-m>
+			<x2-m> 2.0446</x2-m>
+			<y2-m>-7.26919</y2-m>
+			<z2-m>-2.96595</z2-m>
+		</axis>
+	</animation>
 
-<animation> 
-	<type>translate</type> 
-	<object-name>RFflapwing2</object-name> 
-	<property>surface-positions/flap-pos-norm</property>
-	<interpolation>
-	 	<entry>  
-	 		<ind>0</ind>  
-	 		<dep>0.0</dep> 
-	 		</entry> 
-	 	<entry> 
-	 		<ind>1</ind>  
-	 		<dep>0.45</dep> 
-	 	</entry> 
-	 </interpolation> 
-  <axis>
-     <x1-m>2.6316</x1-m>
-     <y1-m>15.2467</y1-m>
-     <z1-m>-1.43764</z1-m>
-     <x2-m>2.14855</x2-m>
-     <y2-m>15.5299</y2-m>
-     <z2-m>-1.58143</z2-m>
-  </axis>
-</animation> 
+	<animation>
+		<type>rotate</type>
+		<object-name>flapr</object-name>
+		<property>surface-positions/flap-pos-norm</property>
+		<factor>30</factor>
+		<axis>
+			<x1-m> 1.9652</x1-m>
+			<y1-m> 2.64224</y1-m>
+			<z1-m>-3.77504</z1-m>
+			<x2-m> 2.0446</x2-m>
+			<y2-m> 7.26919</y2-m>
+			<z2-m>-2.96595</z2-m>
+		</axis>
+	</animation>
+ 
+	<animation>
+		<type>rotate</type>
+		<object-name>LgomoWingInt</object-name>
+		<property>surface-positions/flap-pos-norm</property>
+		<factor>-30</factor>
+		<axis>
+			<x1-m> 1.9652</x1-m>
+			<y1-m>-2.64224</y1-m>
+			<z1-m>-3.77504</z1-m>
+			<x2-m> 2.0446</x2-m>
+			<y2-m>-7.26919</y2-m>
+			<z2-m>-2.96595</z2-m>
+		</axis>
+	</animation>
 
-<!-- ########## -->
-<!-- Engine Fan -->
-<!-- ########## -->
-    <animation>
-        <type>spin</type>
-        <object-name>fanl</object-name>
-        <property>engines/engine[0]/rpm</property>
-        <factor>10</factor>
-        <center>
-            <x-m>-5.74</x-m>
-            <y-m>-7.78</y-m>
-            <z-m>-4.43</z-m>
-        </center>
-        <axis>
-            <x>-1.0</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-    </animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>RgomoWingInt</object-name>
+		<property>surface-positions/flap-pos-norm</property>
+		<factor>30</factor>
+		<axis>
+			<x1-m> 1.9652</x1-m>
+			<y1-m> 2.64224</y1-m>
+			<z1-m>-3.77504</z1-m>
+			<x2-m> 2.0446</x2-m>
+			<y2-m> 7.26919</y2-m>
+			<z2-m>-2.96595</z2-m>
+		</axis>
+	</animation>
+ 
+	<!-- Extreme flaps -->
+	<animation>
+		<type>rotate</type>
+		<object-name>flap_ext_L</object-name>
+		<object-name>RgomoWing1b</object-name>
+		<object-name>RgomoWing0b</object-name>
+		<property>surface-positions/flap-pos-norm</property>
+		<factor>-30</factor>
+		<axis>
+			<x1-m> 3.2773</x1-m>
+			<y1-m>-9.22202</y1-m>
+			<z1-m>-2.55506</z1-m>
+			<x2-m> 6.6152</x2-m>
+			<y2-m>-17.5003</y2-m>
+			<z2-m>-1.57581</z2-m>
+		</axis>
+	</animation>
 
-    <animation>
-        <type>spin</type>
-        <object-name>fanr</object-name>
-        <property>engines/engine[1]/rpm</property>
-        <factor>10</factor>
-        <center>
-            <x-m>-5.74</x-m>
-            <y-m>7.78</y-m>
-            <z-m>-4.43</z-m>
-        </center>
-        <axis>
-            <x>-1.0</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-    </animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>flap_ext_R</object-name>
+		<object-name>RgomoWing2b</object-name>
+		<object-name>RgomoWing3b</object-name>
+		<property>surface-positions/flap-pos-norm</property>
+		<factor>30</factor>
+		<axis>
+			<x1-m> 3.2773</x1-m>
+			<y1-m>9.22202</y1-m>
+			<z1-m>-2.55506</z1-m>
+			<x2-m> 6.6152</x2-m>
+			<y2-m>17.5003</y2-m>
+			<z2-m>-1.57581</z2-m>
+		</axis>
+	</animation>
+ 
+	<!-- ############ -->
+	<!--  Speedbrake  -->
+	<!-- ############ -->
+	<animation>
+		<type>rotate</type>
+		<object-name>speedbrakel</object-name>
+		<property>surface-positions/speedbrake-norm</property>
+		<factor>-75</factor>
+		<offset-deg>0</offset-deg>   
+		<axis>
+			<x1-m> 1.80099</x1-m>
+			<y1-m>-6.82084</y1-m>
+			<z1-m>-2.4767</z1-m>
+			<x2-m> 1.49268</x2-m>
+			<y2-m>-3.3113</y2-m>
+			<z2-m>-3.00889</z2-m>
+		</axis>
+	</animation>  
 
-<!-- ######### -->
-<!-- Reversers -->
-<!-- ######### -->
-    <animation>
-        <type>translate</type>
-        <object-name>reverser</object-name>
-        <property>surface-positions/reverser-norm</property>
-        <factor>0.35</factor>
-        <axis>
-            <x>1.0</x>
-            <y>0.0</y>
-            <z>0</z>
-        </axis>
-    </animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>speedbraker</object-name>
+		<property>surface-positions/speedbrake-norm</property>
+		<factor>75</factor>
+		<offset-deg>0</offset-deg>   
+		<axis>
+			<x1-m> 1.80099</x1-m>
+			<y1-m> 6.82084</y1-m>
+			<z1-m>-2.4767</z1-m>
+			<x2-m> 1.49268</x2-m>
+			<y2-m> 3.3113</y2-m>
+			<z2-m>-3.00889</z2-m>
+		</axis>
+	</animation>  
+ 
+ 
+	<animation>
+		<type>rotate</type>
+		<object-name>speedbrake_LE</object-name>
+		<property>surface-positions/speedbrake-norm</property>
+		<factor>-75</factor>
+		<offset-deg>0</offset-deg>   
+		<axis>
+			<x1-m> 5.0027</x1-m>
+			<y1-m>-15.3548</y1-m>
+			<z1-m>-1.59783</z1-m>
+			<x2-m> 2.75766</x2-m>
+			<y2-m>-9.66211</y2-m>
+			<z2-m>-2.22535</z2-m>
+		</axis>
+	</animation>  
 
-    <!-- Glass window shine -->
-    <animation>
-        <type>shader</type>
-        <shader>chrome</shader>
-        <texture>glass_shader.png</texture>
-        <object-name>glass</object-name>
-    </animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>speedbrake_RE</object-name>
+		<property>surface-positions/speedbrake-norm</property>
+		<factor>75</factor>
+		<offset-deg>0</offset-deg>   
+		<axis>
+			<x1-m> 5.0027</x1-m>
+			<y1-m>15.3548</y1-m>
+			<z1-m>-1.59783</z1-m>
+			<x2-m> 2.75766</x2-m>
+			<y2-m>9.66211</y2-m>
+			<z2-m>-2.22535</z2-m>
+		</axis>
+	</animation>  
 
-    <!-- Metal edge shine -->
-    <animation>
-        <type>shader</type>
-        <shader>chrome</shader>
-        <texture>chrome.png</texture>
-        <object-name>LFflapwing1</object-name>
-        <object-name>LFflapwing2</object-name>
-        <object-name>RFflapwing1</object-name>
-        <object-name>RFflapwing2</object-name>
-        <object-name>LFflapwing1_std</object-name>
-        <object-name>LFflapwing2_std</object-name>
-        <object-name>RFflapwing1_std</object-name>
-        <object-name>RFflapwing2_std</object-name>
+	<!-- ####### -->
+	<!--  Slats  -->
+	<!-- ####### -->
 
-    </animation>
-  
-<!-- Sentry Radar -->
-<model>
-	<path>Aircraft/JPack/Voodoomaster/Models/Radars/Sentry/Sentry.xml</path>
-	<offsets>
-		<x-m>  0.57222 </x-m>
-		<y-m>  0.00000 </y-m>
-		<z-m> -1.30594 </z-m>
-	</offsets>
-</model>
-  
-<!-- Boom -->
-<model>
-	<path>Aircraft/JPack/Voodoomaster/Models/Refuel/Boom.xml</path>
-	<offsets>
-		<x-m>  0.77222 </x-m>
-		<y-m>  0.00000 </y-m>
-		<z-m> -3.10594 </z-m>
-	</offsets>
-</model>
-  
-<!-- Probe left -->
-<model>
-	<path>Aircraft/JPack/Voodoomaster/Models/Refuel/Probe.xml</path>
-	<offsets>
-		<x-m> -4.97222 </x-m>
-		<y-m>  2.00000 </y-m>
-		<z-m> -2.40594 </z-m>
-	</offsets>
-</model>
-  
-<!-- Probe center -->
-<model>
-	<path>Aircraft/JPack/Voodoomaster/Models/Refuel/Probe.xml</path>
-	<offsets>
-		<x-m>  0.87222 </x-m>
-		<y-m> 20.00000 </y-m>
-		<z-m> -3.10594 </z-m>
-	</offsets>
-</model>
-  
-<!-- Probe right -->
-<model>
-	<path>Aircraft/JPack/Voodoomaster/Models/Refuel/Probe.xml</path>
-	<offsets>
-		<x-m> -4.97222 </x-m>
-		<y-m> 37.70000 </y-m>
-		<z-m> -2.40594 </z-m>
-	</offsets>
-</model>
+	<!-- Internal -->
+	<animation>
+		<type>rotate</type>
+		<object-name>LFflapwing1</object-name>
+		<property>surface-positions/flap-pos-norm</property>
+		<factor>-5</factor>
+		<axis>
+			<x1-m> -0.839765</x1-m>
+			<y1-m>-8.34939</y1-m>
+			<z1-m>-2.73192</z1-m>
+			<x2-m> -4.69483</x2-m>
+			<y2-m>-2.77365</y2-m>
+			<z2-m>-3.33119</z2-m>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>RFflapwing1</object-name>
+		<property>surface-positions/flap-pos-norm</property>
+		<factor>5</factor>
+		<axis>
+			<x1-m> -0.839765</x1-m>
+			<y1-m> 8.34939</y1-m>
+			<z1-m>-2.73192</z1-m>
+			<x2-m> -4.69483</x2-m>
+			<y2-m> 2.77365</y2-m>
+			<z2-m>-3.33119</z2-m>
+		</axis>
+	</animation> 
+ 
+	<animation> 
+		<type>translate</type> 
+		<object-name>LFflapwing1</object-name> 
+		<property>surface-positions/flap-pos-norm</property>
+		<interpolation>
+			<entry>  
+				<ind>0</ind>  
+				<dep>0.0</dep> 
+			</entry> 
+			<entry> 
+				<ind>1</ind>  
+				<dep>0.15</dep> 
+			</entry> 
+		</interpolation> 
+		<axis>
+			<x1-m>-4.15395</x1-m>
+			<y1-m>-4.93814</y1-m>
+			<z1-m>-2.42274</z1-m>
+			<x2-m>-4.568</x2-m>
+			<y2-m>-5.20181</y2-m>
+			<z2-m>-2.57948</z2-m>
+		</axis>
+	</animation> 
+
+	<animation> 
+		<type>translate</type> 
+		<object-name>RFflapwing1</object-name> 
+		<property>surface-positions/flap-pos-norm</property>
+		<interpolation>
+			<entry>  
+				<ind>0</ind>  
+				<dep>0.0</dep> 
+			</entry> 
+			<entry> 
+				<ind>1</ind>  
+				<dep>0.15</dep> 
+			</entry> 
+		</interpolation> 
+		<axis>
+			<x1-m>-4.15395</x1-m>
+			<y1-m>4.93814</y1-m>
+			<z1-m>-2.42274</z1-m>
+			<x2-m>-4.568</x2-m>
+			<y2-m>5.20181</y2-m>
+			<z2-m>-2.57948</z2-m>
+		</axis>
+	</animation> 
+ 
+	<!-- External -->
+	<animation>
+		<type>rotate</type>
+		<object-name>LFflapwing2</object-name>
+		<property>surface-positions/flap-pos-norm</property>
+		<factor>-10</factor>
+		<axis>
+			<x1-m> 6.8506</x1-m>
+			<y1-m>-22.8474</y1-m>
+			<z1-m>-0.93226</z1-m>
+			<x2-m> -2.7067</x2-m>
+			<y2-m>-8.3356</y2-m>
+			<z2-m>-2.42005</z2-m>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>RFflapwing2</object-name>
+		<property>surface-positions/flap-pos-norm</property>
+		<factor>10</factor>
+		<axis>
+			<x1-m> 6.8506</x1-m>
+			<y1-m>22.8474</y1-m>
+			<z1-m>-0.93226</z1-m>
+			<x2-m> -2.7067</x2-m>
+			<y2-m>8.3356</y2-m>
+			<z2-m>-2.42005</z2-m>
+		</axis>
+	</animation> 
+ 
+	<animation> 
+		<type>translate</type> 
+		<object-name>LFflapwing2</object-name> 
+		<property>surface-positions/flap-pos-norm</property>
+		<interpolation>
+			<entry>  
+				<ind>0</ind>  
+				<dep>0.0</dep> 
+			</entry> 
+			<entry> 
+				<ind>1</ind>  
+				<dep>0.45</dep> 
+			</entry> 
+		</interpolation> 
+		<axis>
+			<x1-m>2.6316</x1-m>
+			<y1-m>-15.2467</y1-m>
+			<z1-m>-1.43764</z1-m>
+			<x2-m>2.14855</x2-m>
+			<y2-m>-15.5299</y2-m>
+			<z2-m>-1.58143</z2-m>
+		</axis>
+	</animation> 
+
+	<animation>
+		<type>translate</type> 
+		<object-name>RFflapwing2</object-name> 
+		<property>surface-positions/flap-pos-norm</property>
+		<interpolation>
+			<entry>  
+				<ind>0</ind>  
+				<dep>0.0</dep> 
+			</entry> 
+			<entry> 
+				<ind>1</ind>  
+				<dep>0.45</dep> 
+			</entry> 
+		</interpolation> 
+		<axis>
+			<x1-m>2.6316</x1-m>
+			<y1-m>15.2467</y1-m>
+			<z1-m>-1.43764</z1-m>
+			<x2-m>2.14855</x2-m>
+			<y2-m>15.5299</y2-m>
+			<z2-m>-1.58143</z2-m>
+		</axis>
+	</animation> 
+
+	<!-- ########## -->
+	<!-- Engine Fan -->
+	<!-- ########## -->
+	<animation>
+		<type>spin</type>
+		<object-name>fanl</object-name>
+		<property>engines/engine[0]/rpm</property>
+		<factor>10</factor>
+		<center>
+			<x-m>-5.74</x-m>
+			<y-m>-7.78</y-m>
+			<z-m>-4.43</z-m>
+		</center>
+		<axis>
+			<x>-1.0</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>spin</type>
+		<object-name>fanr</object-name>
+		<property>engines/engine[1]/rpm</property>
+		<factor>10</factor>
+		<center>
+			<x-m>-5.74</x-m>
+			<y-m>7.78</y-m>
+			<z-m>-4.43</z-m>
+		</center>
+		<axis>
+			<x>-1.0</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!-- ######### -->
+	<!-- Reversers -->
+	<!-- ######### -->
+	<animation>
+		<type>translate</type>
+		<object-name>reverser</object-name>
+		<property>surface-positions/reverser-norm</property>
+		<factor>0.35</factor>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!-- Glass window shine -->
+	<animation>
+		<type>shader</type>
+		<shader>chrome</shader>
+		<texture>glass_shader.png</texture>
+		<object-name>glass</object-name>
+	</animation>
+
+	<!-- Metal edge shine -->
+	<animation>
+		<type>shader</type>
+		<shader>chrome</shader>
+		<texture>chrome.png</texture>
+		<object-name>LFflapwing1</object-name>
+		<object-name>LFflapwing2</object-name>
+		<object-name>RFflapwing1</object-name>
+		<object-name>RFflapwing2</object-name>
+		<object-name>LFflapwing1_std</object-name>
+		<object-name>LFflapwing2_std</object-name>
+		<object-name>RFflapwing1_std</object-name>
+		<object-name>RFflapwing2_std</object-name>
+	</animation>
 
 </PropertyList>

@@ -43,7 +43,7 @@
 
 			<!-- JPack: push forces for Voodoomaster Pushback -->
 			<pushback>
-				<kp type="double">800</kp>
+				<kp type="double">1200</kp>
 				<ki type="double">0</ki>
 				<kd type="double">0</kd>
 				<position-norm type="double">0</position-norm>
@@ -52,7 +52,7 @@
 
 			<!-- String variable to hold current livery -->
 			<livery>
-				<file type="string">JFW</file>
+				<file type="string">DAL</file>
 			</livery>
 
 		</model>
@@ -345,7 +345,7 @@
 		<menubar>
 			<default>
 				<menu n="100">
-					<label>FlyingWorkshop</label>
+					<label>767-300ER</label>
 					<enabled type="bool">true</enabled>
 
 					<item>
@@ -353,81 +353,6 @@
 						<binding>
 							<command>property-toggle</command>
 							<property>sim/model/start-idling</property>
-						</binding>
-					</item>
-
-					<item>
-						<label>Extend Boom</label>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel/boom-angle</property>
-							<value>0.6</value>
-						</binding>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel/boom-extend</property>
-							<value>1.0</value>
-						</binding>
-					</item>
-
-					<item>
-						<label>Retract Boom</label>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel/boom-angle</property>
-							<value>0.0</value>
-						</binding>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel/boom-extend</property>
-							<value>0.0</value>
-						</binding>
-					</item>
-
-					<item>
-						<label>Extend Probes</label>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel[1]/probe-extended</property>
-							<value>true</value>
-						</binding>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel[2]/probe-extended</property>
-							<value>true</value>
-						</binding>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel[3]/probe-extended</property>
-							<value>true</value>
-						</binding>
-					</item>
-
-					<item>
-						<label>Retract Probes</label>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel[1]/probe-extended</property>
-							<value>false</value>
-						</binding>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel[2]/probe-extended</property>
-							<value>false</value>
-						</binding>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel[3]/probe-extended</property>
-							<value>false</value>
-						</binding>
-					</item>
-
-					<item>
-						<label>Pushback</label>
-						<name>pushback</name>
-						<binding>
-							<command>dialog-show</command>
-							<dialog-name>pushback</dialog-name>
 						</binding>
 					</item>
 
@@ -502,31 +427,19 @@
 			<tank n="0">
 				<name>Left wing</name>
 				<tank-num type="int">0</tank-num>
-				<level-gal_us archive="y">6070</level-gal_us>
+				<level-gal_us archive="y">6010</level-gal_us>
 			</tank>
 
 			<tank n="1">
-				<name>Center forward</name>
+				<name>Center</name>
 				<tank-num type="int">1</tank-num>
-				<level-gal_us archive="y">6000</level-gal_us>
+				<level-gal_us archive="y">11900</level-gal_us>
 			</tank>
 
 			<tank n="2">
-				<name>Center middle</name>
-				<tank-num type="int">2</tank-num>
-				<level-gal_us archive="y">6070</level-gal_us>
-			</tank>
-
-			<tank n="3">
-				<name>Center aft</name>
-				<tank-num type="int">3</tank-num>
-				<level-gal_us archive="y">6000</level-gal_us>
-			</tank>
-
-			<tank n="4">
 				<name>Right wing</name>
-				<tank-num type="int">4</tank-num>
-				<level-gal_us archive="y">6070</level-gal_us>
+				<tank-num type="int">2</tank-num>
+				<level-gal_us archive="y">6010</level-gal_us>
 			</tank>
 		</fuel>
 	</consumables>
@@ -535,7 +448,7 @@
 	<payload>
 
 		<weight n="0">
-			<name>Crew</name>
+			<name>Cockpit Crew</name>
 			<!-- pilot + copilot -->
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]" />
 			<min-lb type="double">  200</min-lb>
@@ -543,35 +456,43 @@
 		</weight>
 
 		<weight n="1">
-			<!-- boom operator + load master -->
-			<name>Refuel ops</name>
+			<!-- six to twelve flight-attendants -->
+			<name>Cabin Crew</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]" />
-			<min-lb type="double">  200</min-lb>
-			<max-lb type="double">  400</max-lb>
+			<min-lb type="double">1200</min-lb>
+			<max-lb type="double">2400</max-lb>
 		</weight>
 
 		<weight n="2">
-			<!-- AirVac team (KC-46) or TechTeam (Workshop) -->
-			<name>Tech ops</name>
+			<!-- First Class/Delta One -->
+			<name>First Class</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]" />
 			<min-lb type="double">    0</min-lb>
-			<max-lb type="double"> 3000</max-lb>
+			<max-lb type="double"> 7200</max-lb>
 		</weight>
 
 		<weight n="3">
-			<!-- 3 operators -->
-			<name>Radar ops</name>
+			<!-- Business Class/Delta Comfort -->
+			<name>Business Class</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]" />
 			<min-lb type="double">    0</min-lb>
-			<max-lb type="double">  600</max-lb>
+			<max-lb type="double"> 7000</max-lb>
 		</weight>
 
 		<weight n="4">
-			<!-- Spare parts -->
-			<name>Spare parts</name>
+			<!-- Economy -->
+			<name>Economy Class</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[4]" />
 			<min-lb type="double">    0</min-lb>
-			<max-lb type="double">65000</max-lb>
+			<max-lb type="double">28600</max-lb>
+		</weight>
+
+		<weight n="5">
+			<!-- Luggage/Freight -->
+			<name>Luggage</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[5]" />
+			<min-lb type="double">    0</min-lb>
+			<max-lb type="double"> 9210</max-lb>
 		</weight>
 
 	</payload>
@@ -667,6 +588,24 @@
 			</key -->
 		</keyboard>
 	</input>
+    
+	<!-- Autopilot initialization -->
+	<autopilot>
+
+		<settings>
+			<kts-mach-select type="string">kts</kts-mach-select>
+			<max-pitch type="float"> 6.0</max-pitch>
+			<min-pitch type="float">-4.0</min-pitch>
+			<bank-angle-limit-deg type="int">35</bank-angle-limit-deg>
+		</settings>
+
+		<internal>
+			<target-pitch-deg type="float">0.00</target-pitch-deg>
+			<max-pitch type="float"> 6.0</max-pitch>
+			<min-pitch type="float">-4.0</min-pitch>
+		</internal>
+
+	</autopilot>
   
 	<!-- Voodoomaster plane specific initializations -->
 	<voodoomaster>
@@ -675,30 +614,6 @@
 		<pushback>
 			<activated type="bool">false</activated>
 		</pushback>
-		<radar n="0">
-			<device type="string">Sentry</device>
-			<antenna-x type="float">1.0</antenna-x>
-			<antenna-y type="float">1.0</antenna-y>
-			<antenna-z type="float">1.0</antenna-z>
-			<antenna-r type="bool">true</antenna-r>
-		</radar>
-		<refuel n="0">
-			<device type="string">RefuelBoom</device>
-			<boom-angle type="float">0.0</boom-angle>
-			<boom-extend type="float">0.0</boom-extend>
-		</refuel>
-		<refuel n="1">
-			<device type="string">RefuelProbe</device>
-			<probe-extended type="bool">false</probe-extended>
-		</refuel>
-		<refuel n="2">
-			<device type="string">RefuelProbe</device>
-			<probe-extended type="bool">false</probe-extended>
-		</refuel>
-		<refuel n="3">
-			<device type="string">RefuelProbe</device>
-			<probe-extended type="bool">false</probe-extended>
-		</refuel>
 	</voodoomaster>
 
 	<instrumentation>
@@ -712,13 +627,7 @@
 		<path>Aircraft/767/Systems/instrumentation.xml</path>
 	</instrumentation>
 
-	<multiplay>
-		<generic>
-			<int n="10" alias="voodoomaster/radar[0]/antenna-r"/>
-		</generic>
-	</multiplay>
-
-	<tanker type="bool">true</tanker>
+	<tanker type="bool">false</tanker>
 
 	<nasal>
 		<b767>

@@ -10,11 +10,11 @@
 		<author> Aeromatic v 0.95 </author>
 		<filecreationdate>2015-03-26</filecreationdate>
 		<version>$Revision: 1.15 $</version>
-		<description> Models a 767-300JWocky. </description>
+		<description> Models a 767-300ER. </description>
 	</fileheader>
 
 	<!--
-		File:     767-300JWocky.xml
+		File:     767-300ER.xml
 		Inputs:
 			name:          767-300JWocky
 			type:          two-engine transonic transport
@@ -61,7 +61,7 @@
 		<location name="VRP" unit="IN">
 			<x>-1081.50</x>
 			<y>0</y>
-			<z>158</z>
+			<z>154</z>
 		</location>
 	</metrics>
 
@@ -69,14 +69,14 @@
 		<ixx unit="SLUG*FT2">   2346384 </ixx>
 		<iyy unit="SLUG*FT2">   7228216 </iyy>
 		<izz unit="SLUG*FT2">   9220445 </izz>
-		<emptywt unit="LBS" >    198440 </emptywt>
+		<emptywt unit="LBS" >    189750 </emptywt>
 		<location name="CG" unit="IN">
 			<x> -30.00 </x>
 			<y>   0.00 </y>
 			<z> -54.07 </z>
 		</location>
 
-		<pointmass name="Crew">
+		<pointmass name="Cockpit Crew">
 			<description>Careful, can be overloaded! Different configurations for different missions!</description>
 			<weight unit="LBS">  400.0000 </weight>
 			<location name="CREW" unit="IN">
@@ -86,40 +86,50 @@
 			</location>
 		</pointmass> 
 
-		<pointmass name="Refuel ops">
+		<pointmass name="Cabin Crew">
 			<description>Careful, can be overloaded! Different configurations for different missions!</description>
-			<weight unit="LBS">  400.0000 </weight>
-			<location name="CREW" unit="IN">
+			<weight unit="LBS"> 1200.0000 </weight>
+			<location name="Cockpit CREW" unit="IN">
 				<x>   600.00 </x>
 				<y>     0.00 </y>
 				<z>   -54.07 </z>
 			</location>
 		</pointmass> 
 
-		<pointmass name="Tech ops">
+		<pointmass name="First Class">
 			<description>Careful, can be overloaded! Different configurations for different missions!</description>
-			<weight unit="LBS"> 3000.0000 </weight>
-			<location name="Tech ops" unit="IN">
+			<weight unit="LBS"> 3600.0000 </weight>
+			<location name="First Class" unit="IN">
 				<x>  -400.00 </x>
 				<y>     0.00 </y>
 				<z>   -54.07 </z>
 			</location>
 		</pointmass> 
 
-		<pointmass name="Radar ops">
+		<pointmass name="Business Class">
 			<description>Careful, can be overloaded! Different configurations for different missions!</description>
-			<weight unit="LBS"> 600.0000 </weight>
-			<location name="Tech ops" unit="IN">
+			<weight unit="LBS"> 3500.0000 </weight>
+			<location name="Business Class" unit="IN">
 				<x>   200.00 </x>
 				<y>     0.00 </y>
 				<z>   -54.07 </z>
 			</location>
 		</pointmass> 
 
-		<pointmass name="Spare parts">
+		<pointmass name="Economy Class">
 			<description>Careful, can be overloaded! Different configurations for different missions!</description>
-			<weight unit="LBS"> 65000.0000 </weight>
-			<location name="Tech ops" unit="IN">
+			<weight unit="LBS"> 14300.0000 </weight>
+			<location name="Economy Class" unit="IN">
+				<x>  	0.00 </x>
+				<y>     0.00 </y>
+				<z>   -54.07 </z>
+			</location>
+		</pointmass> 
+
+		<pointmass name="Luggage">
+			<description>Careful, can be overloaded! Different configurations for different missions!</description>
+			<weight unit="LBS"> 3340.0000 </weight>
+			<location name="Economy Class" unit="IN">
 				<x>  	0.00 </x>
 				<y>     0.00 </y>
 				<z>   -54.07 </z>
@@ -134,15 +144,15 @@
 			<location unit="IN">
 				<x> -980.19 </x>
 				<y>    0.00 </y>
-				<z>  -63.00 </z>
+				<z>  -65.00 </z>
 			</location>
 			<static_friction>  0.80 </static_friction>
 			<dynamic_friction> 0.50 </dynamic_friction>
 			<rolling_friction> 0.02 </rolling_friction>
-			<spring_coeff unit="LBS/FT">      247200.00 </spring_coeff>
-			<damping_coeff unit="LBS/FT/SEC"> 206000.00 </damping_coeff>
-			<damping_coeff_rebound unit="LBS/FT/SEC">150000</damping_coeff_rebound>
-			<max_steer unit="DEG"> 25.00 </max_steer>
+			<spring_coeff unit="LBS/FT">      147200.00 </spring_coeff>
+			<damping_coeff unit="LBS/FT/SEC"> 106000.00 </damping_coeff>
+			<damping_coeff_rebound unit="LBS/FT/SEC">60000</damping_coeff_rebound>
+			<max_steer unit="DEG"> 45.00 </max_steer>
 			<brake_group>NONE</brake_group>
 			<retractable>1</retractable>
 		</contact>
@@ -151,14 +161,14 @@
 			<location unit="IN">
 				<x>  240.48 </x>
 				<y> -168.59 </y>
-				<z>  -63.00 </z>
+				<z>  -62.00 </z>
 			</location>
 			<static_friction>  0.80 </static_friction>
 			<dynamic_friction> 0.50 </dynamic_friction>
 			<rolling_friction> 0.02 </rolling_friction>
-			<spring_coeff unit="LBS/FT">      618000.00 </spring_coeff>
-			<damping_coeff unit="LBS/FT/SEC"> 206000.00 </damping_coeff>
-			<damping_coeff_rebound unit="LBS/FT/SEC">150000</damping_coeff_rebound>
+			<spring_coeff unit="LBS/FT">      218000.00 </spring_coeff>
+			<damping_coeff unit="LBS/FT/SEC"> 106000.00 </damping_coeff>
+			<damping_coeff_rebound unit="LBS/FT/SEC">80000</damping_coeff_rebound>
 			<max_steer unit="DEG">0</max_steer>
 			<brake_group>LEFT</brake_group>
 			<retractable>1</retractable>
@@ -168,14 +178,14 @@
 			<location unit="IN">
 				<x> 240.48 </x>
 				<y> 168.59 </y>
-				<z> -63.00 </z>
+				<z> -62.00 </z>
 			</location>
 			<static_friction>  0.80 </static_friction>
 			<dynamic_friction> 0.50 </dynamic_friction>
 			<rolling_friction> 0.02 </rolling_friction>
-			<spring_coeff unit="LBS/FT">      618000.00 </spring_coeff>
-			<damping_coeff unit="LBS/FT/SEC"> 206000.00 </damping_coeff>
-			<damping_coeff_rebound unit="LBS/FT/SEC">150000</damping_coeff_rebound>
+			<spring_coeff unit="LBS/FT">      218000.00 </spring_coeff>
+			<damping_coeff unit="LBS/FT/SEC"> 106000.00 </damping_coeff>
+			<damping_coeff_rebound unit="LBS/FT/SEC">80000</damping_coeff_rebound>
 			<max_steer unit="DEG">0</max_steer>
 			<brake_group>RIGHT</brake_group>
 			<retractable>1</retractable>
@@ -222,7 +232,6 @@
 			</orient>
 			<feed>0</feed>
 			<feed>1</feed>
-			<feed>2</feed>
 			<thruster file="direct">
 				<location unit="IN">
 					<x> -120.00 </x>
@@ -248,8 +257,7 @@
 				<roll>  0.00 </roll>
 				<yaw>   0.00 </yaw>
 			</orient>
-			<feed>4</feed>
-			<feed>3</feed>
+			<feed>1</feed>
 			<feed>2</feed>
 			<thruster file="direct">
 				<location unit="IN">
@@ -272,7 +280,7 @@
 				<z>  -54.07 </z>
 			</location>
 			<priority>2</priority>
-			<capacity unit="LBS"> 42490.00 </capacity>
+			<capacity unit="LBS"> 42070.00 </capacity>
 			<contents unit="LBS"> 0.00 </contents>
 		</tank>
 
@@ -283,46 +291,26 @@
 				<z>  -54.07 </z>
 			</location>
 			<priority>1</priority>
-			<capacity unit="LBS"> 42000.00 </capacity>
+			<capacity unit="LBS"> 83300.00 </capacity>
 			<contents unit="LBS"> 0.00 </contents>
 		</tank>
 
 		<tank type="FUEL" number="2">
-			<location unit="IN">
-				<x>    0.00 </x>
-				<y>    0.00 </y>
-				<z>  -54.07 </z>
-			</location>
-			<priority>3</priority>
-			<capacity unit="LBS"> 42499.00 </capacity>
-			<contents unit="LBS"> 0.00 </contents>
-		</tank>
-
-		<tank type="FUEL" number="3">
-			<location unit="IN">
-				<x>   30.00 </x>
-				<y>    0.00 </y>
-				<z>  -54.07 </z>
-			</location>
-			<priority>1</priority>
-			<capacity unit="LBS"> 42000.00 </capacity>
-			<contents unit="LBS"> 0.00 </contents>
-		</tank>
-
-		<tank type="FUEL" number="4">
 			<location unit="IN">
 				<x>  -30.00 </x>
 				<y>  150.00 </y>
 				<z>  -54.07 </z>
 			</location>
 			<priority>2</priority>
-			<capacity unit="LBS"> 42490.00 </capacity>
+			<capacity unit="LBS"> 42070.00 </capacity>
 			<contents unit="LBS"> 0.00 </contents>
 		</tank>
 
 	</propulsion>
 
-	<flight_control name="FCS: 767-300JWocky">
+	<system file="TriCycle_PushbackJSBSIM"/>
+
+	<flight_control name="FCS: 767-300ER">
 
 		<channel name="Pitch">
 
@@ -920,7 +908,20 @@
 
 	</aerodynamics>
 
+	<!-- JPACK: Force-point for Voodoomaster Pushback -->
 	<external_reactions>
+		<force name="pushback" frame="BODY">
+			<location unit="IN">
+				<x> -980.19 </x>
+				<y>    0.00 </y>
+				<z>  -65.00 </z>
+			</location>
+			<direction>
+				<x>1</x>
+				<y>0</y>
+				<z>0</z>
+			</direction>
+		</force>
 	</external_reactions>
 
 </fdm_config>

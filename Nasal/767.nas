@@ -3,7 +3,10 @@
 # Original by Syd Adams and Liam Gathercole, rewritten by Peter Brendt                              #
 #####################################################################################################
 
-aircraft.livery.init("Aircraft/767/Models/Liveries");
+var hstr="Aircraft/767/Models/Liveries/"~getprop("/sim/aero");
+print(hstr);
+aircraft.livery.init(hstr);
+#aircraft.livery.init("Aircraft/767/Models/Liveries");
 
 var SndOut = props.globals.getNode("/sim/sound/Ovolume",1);
 var FHmeter = aircraft.timer.new("/instrumentation/clock/flight-meter-sec", 10).stop();
