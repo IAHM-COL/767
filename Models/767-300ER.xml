@@ -1014,7 +1014,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>speedbrakel</object-name>
-		<property>surface-positions/speedbrake-norm</property>
+		<property>fdm/jsbsim/fcs/speedbrake-pos-norm</property>
 		<factor>-75</factor>
 		<offset-deg>0</offset-deg>   
 		<axis>
@@ -1030,7 +1030,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>speedbraker</object-name>
-		<property>surface-positions/speedbrake-norm</property>
+		<property>fdm/jsbsim/fcs/speedbrake-pos-norm</property>
 		<factor>75</factor>
 		<offset-deg>0</offset-deg>   
 		<axis>

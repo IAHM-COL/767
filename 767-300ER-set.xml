@@ -534,7 +534,6 @@
 	<!-- #### ai submodels -->
 
 	<input>
-		<!-- keyboard include="XMLs/Keyboard.xml"/ -->
 		<keyboard>
 
 			<key n="119">
@@ -557,6 +556,19 @@
 				</binding>
 			</key>
 
+			<key n="2">
+				<name>Ctrl-B</name>
+				<desc>Speedbrakes</desc>
+				<repeatable>true</repeatable>
+				<binding>
+					<command>property-cycle</command>
+					<property>controls/flight/speedbrake</property>
+					<value>0.0</value>
+					<value>0.5</value>
+					<value>1.0</value>
+				</binding>
+			</key>
+
 			<key n="127">
 				<name>Delete</name>
 				<desc>Toggle thrust reverser.</desc>
@@ -573,19 +585,6 @@
 					<value>0</value>
 				</binding>
 			</key>
-
-			<!-- key n="127">
-				<name>Delete</name>
-				<desc>Toggle Reversers</desc>
-				<binding>
-					<command>property-toggle</command>
-					<property>controls/engines/engine[0]/reverser</property>
-				</binding>
-				<binding>
-					<command>property-toggle</command>
-					<property>controls/engines/engine[1]/reverser</property>
-				</binding>
-			</key -->
 		</keyboard>
 	</input>
     
