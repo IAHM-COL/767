@@ -38,7 +38,7 @@
 		<object-name>cargodoor</object-name>
 		<property-base>sim/model/livery</property-base>
 		<texture-prop>texture</texture-prop>
-		<texture>JFW.png</texture>
+		<texture>Liveries/767-300/DAL_1962-1997.png</texture>
 	</animation>
 	<!-- Livery System -->
     
