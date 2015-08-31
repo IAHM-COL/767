@@ -21603,7 +21603,7 @@ crease 45.000000
 kids 1
 OBJECT poly
 name "LdoorNoseGear"
-texture "TFL.png"
+texture "Liveries/Workshop/JFW.png"
 crease 45.000000
 numvert 18
 3.60268 2.28048 -0.00261551
@@ -21951,7 +21951,7 @@ crease 45.000000
 kids 1
 OBJECT poly
 name "VStab"
-texture "TFL.png"
+texture "Liveries/Workshop/JFW.png"
 crease 45.000000
 numvert 7
 54.2203 15.4478 0.0800786
@@ -31783,7 +31783,7 @@ crease 45.000000
 kids 1
 OBJECT poly
 name "VStab"
-texture "TFL.png"
+texture "Liveries/Workshop/JFW.png"
 crease 45.000000
 numvert 89
 45.5667 7.44141 -0.380858
@@ -32774,7 +32774,7 @@ kids 0
 OBJECT poly
 name "VRudder"
 loc 25.3639 4.61237 -0.0169415
-texture "TFL.png"
+texture "Liveries/Workshop/JFW.png"
 crease 45.000000
 numvert 14
 2.38797 4.47925 0.0966811
@@ -36517,7 +36517,7 @@ kids 0
 OBJECT poly
 name "CylInternalTurbofan"
 loc -4.13658 -4.32936 7.81556
-texture "TFL.png"
+texture "Liveries/Workshop/JFW.png"
 crease 45.000000
 numvert 84
 -0.731594 -2.38419e-006 -16.7667
@@ -36904,7 +36904,7 @@ name "Mesh57"
 kids 1
 OBJECT poly
 name "RCapaturbofan"
-texture "TFL.png"
+texture "Liveries/Workshop/JFW.png"
 crease 45.000000
 numvert 278
 23.55 2.41846 -6.79883
@@ -39692,7 +39692,7 @@ name "Mesh29"
 kids 1
 OBJECT poly
 name "LCapaturbofan"
-texture "TFL.png"
+texture "Liveries/Workshop/JFW.png"
 crease 45.000000
 numvert 279
 22.6085 1.5542 9.12891
@@ -42407,7 +42407,7 @@ kids 2
 OBJECT poly
 name "Fuselage"
 loc 1.40767 -0.0448 -3.5041e-008
-texture "TFL.png"
+texture "Liveries/Workshop/JFW.png"
 crease 45.000000
 numvert 2776
 -26.8284 -0.227051 -0.0019542
@@ -72195,7 +72195,7 @@ kids 0
 OBJECT poly
 name "Glass_Fuselage"
 loc -1.40767 0.0447999 3.49246e-008
-texture "TFL.png"
+texture "Liveries/Workshop/JFW.png"
 crease 45.000000
 numvert 1000
 9.92728 0.136963 2.49219
@@ -80278,7 +80278,7 @@ crease 45.000000
 kids 1
 OBJECT poly
 name "VStab"
-texture "TFL.png"
+texture "Liveries/Workshop/JFW.png"
 crease 45.000000
 numvert 6
 48.7335 6.74023 -0.195313
@@ -92381,7 +92381,7 @@ kids 0
 OBJECT poly
 name "GDR"
 loc -22.4451 -4.35413 -0.55405
-texture "TFL.png"
+texture "Liveries/Workshop/JFW.png"
 crease 45.000000
 numvert 32
 -0.412092 0.287486 0.563244
@@ -115105,7 +115105,7 @@ name "Group13"
 kids 2
 OBJECT poly
 name "LpieceTurbofan"
-texture "TFL.png"
+texture "Liveries/Workshop/JFW.png"
 crease 45.000000
 numvert 42
 20.8161 2.89453 6.68164
@@ -115371,7 +115371,7 @@ name "Mesh29"
 kids 3
 OBJECT poly
 name "LCapaturbofan"
-texture "TFL.png"
+texture "Liveries/Workshop/JFW.png"
 crease 45.000000
 numvert 194
 22.2701 0.682617 7.83398
@@ -117294,7 +117294,7 @@ refs 3
 kids 0
 OBJECT poly
 name "LmbConeTurbofan"
-texture "TFL.png"
+texture "Liveries/Workshop/JFW.png"
 crease 45.000000
 numvert 36
 23.8544 1.84131 9.0332
@@ -117613,7 +117613,7 @@ refs 3
 kids 0
 OBJECT poly
 name "LfConeTurbofan"
-texture "TFL.png"
+texture "Liveries/Workshop/JFW.png"
 crease 45.000000
 numvert 96
 19.7516 2.75293 6.94727
@@ -118484,7 +118484,7 @@ refs 3
 kids 0
 OBJECT poly
 name "LdiskFan"
-texture "TFL.png"
+texture "Liveries/Workshop/JFW.png"
 crease 45.000000
 numvert 3
 20.8294 0.775391 7.78516
@@ -118507,7 +118507,7 @@ name "Group32"
 kids 2
 OBJECT poly
 name "RpieceTurbofan"
-texture "TFL.png"
+texture "Liveries/Workshop/JFW.png"
 crease 45.000000
 numvert 27
 21.0071 2.86816 -6.72461
@@ -118734,7 +118734,7 @@ name "Mesh57"
 kids 3
 OBJECT poly
 name "RCapaturbofan"
-texture "TFL.png"
+texture "Liveries/Workshop/JFW.png"
 crease 45.000000
 numvert 192
 22.3154 1.55566 -6.55273
@@ -120655,7 +120655,7 @@ refs 3
 kids 0
 OBJECT poly
 name "RmbConeTurbofan"
-texture "TFL.png"
+texture "Liveries/Workshop/JFW.png"
 crease 45.000000
 numvert 38
 23.9263 2.68457 -6.95117
@@ -120994,7 +120994,7 @@ refs 3
 kids 0
 OBJECT poly
 name "RfConeTurbofan"
-texture "TFL.png"
+texture "Liveries/Workshop/JFW.png"
 crease 45.000000
 numvert 96
 19.6836 2.96436 -8.16602
@@ -121865,7 +121865,7 @@ refs 3
 kids 0
 OBJECT poly
 name "RdiskFan"
-texture "TFL.png"
+texture "Liveries/Workshop/JFW.png"
 crease 45.000000
 numvert 3
 20.8294 0.77539 -7.78125
