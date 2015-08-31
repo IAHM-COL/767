@@ -4,8 +4,8 @@
 <sim>
     <model>
         <livery>
-            <name type="string">Mexicana</name>
-            <texture>Liveries/MXA.png</texture>
+            <name type="string">MXA - Mexicana Airl.</name>
+            <texture>Liveries/767-200ER/MXA.png</texture>
         </livery>
     </model>
 </sim>

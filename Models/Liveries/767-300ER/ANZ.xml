@@ -4,8 +4,8 @@
 <sim>
     <model>
         <livery>
-            <name type="string">Air New Zealand</name>
-            <texture>ANZ.png</texture>
+            <name type="string">ANZ - Air New Zealand</name>
+            <texture>Liveries/767-300ER/ANZ.png</texture>
         </livery>
     </model>
 </sim>

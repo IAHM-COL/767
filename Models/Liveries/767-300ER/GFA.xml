@@ -4,8 +4,8 @@
 <sim>
     <model>
         <livery>
-            <name type="string">Gulf Air</name>
-            <texture>Liveries/GFA.png</texture>
+            <name type="string">GFA - Gulf Air</name>
+            <texture>Liveries/767-300ER/GFA.png</texture>
         </livery>
     </model>
 </sim>

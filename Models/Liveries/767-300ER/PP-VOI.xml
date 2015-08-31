@@ -4,8 +4,8 @@
 <sim>
     <model>
         <livery>
-            <name type="string">VARIG (retro livery)</name>
-            <texture>Liveries/PP-VOI.png</texture>
+            <name type="string">VOI -Varig Airl. Retro Livery</name>
+            <texture>Liveries/767-300ER/PP-VOI.png</texture>
         </livery>
     </model>
 </sim>

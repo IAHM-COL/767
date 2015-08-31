@@ -4,8 +4,8 @@
 <sim>
     <model>
         <livery>
-            <name type="string">KLM</name>
-            <texture>KLM.png</texture>
+            <name type="string">KLM - KLM Royal Dutch Airl.</name>
+            <texture>Liveries/767-300ER/KLM.png</texture>
         </livery>
 
     </model>

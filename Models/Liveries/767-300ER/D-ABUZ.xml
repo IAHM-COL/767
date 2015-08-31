@@ -4,8 +4,8 @@
 <sim>
     <model>
         <livery>
-            <name type="string">Condor Flugdienst (D-ABUZ)</name>
-            <texture>Liveries/D-ABUZ.png</texture>
+            <name type="string">D-ABUZ - Condor Flugdienst</name>
+            <texture>Liveries/767-300ER/D-ABUZ.png</texture>
         </livery>
     </model>
 </sim>

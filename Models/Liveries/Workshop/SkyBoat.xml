@@ -5,7 +5,7 @@
     <model>
         <livery>
             <name type="string">SkyBoat's Equatorial Tour</name>
-            <texture>SkyBoat.png</texture>
+            <texture>Liveries/Workshop/SkyBoat.png</texture>
         </livery>
     </model>
 </sim>

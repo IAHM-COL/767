@@ -4,8 +4,8 @@
 <sim>
     <model>
         <livery>
-            <name type="string">Martinair</name>
-            <texture>Liveries/MPH.png</texture>
+            <name type="string">MPH - Martinair</name>
+            <texture>Liveries/767-300ER/MPH.png</texture>
         </livery>
     </model>
 </sim>

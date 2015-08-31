@@ -4,8 +4,8 @@
 <sim>
     <model>
         <livery>
-            <name type="string">VARIG</name>
-            <texture>Liveries/VRG.png</texture>
+            <name type="string">VRG - Varig Airl.</name>
+            <texture>Liveries/767-200/VRG.png</texture>
         </livery>
     </model>
 </sim>

@@ -4,8 +4,8 @@
 <sim>
     <model>
         <livery>
-            <name type="string">Delta Air Lines (old)</name>
-            <texture>Liveries/DAL_OLD.png</texture>
+            <name type="string">DAL - Delta Airl. (old)</name>
+            <texture>Liveries/767-200/DAL_OLD.png</texture>
         </livery>
     </model>
 </sim>
