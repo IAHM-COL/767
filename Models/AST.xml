@@ -18,7 +18,7 @@
 			# Set up property aliases for animations.
 			rplayer.getNode("voodoomaster/radar[0]/antenna-r", 1).alias(rplayer.getNode("sim/multiplay/generic/int[10]"));
 
-  			var livery_update = aircraft.livery_update.new("Aircraft/767/Models/Liveries", 10);
+  			var livery_update = aircraft.livery_update.new("Aircraft/767/Models/Liveries/AST", 10);
 
 			setprop("voodoomaster/radar[0]/device", "Sentry");
 			setprop("voodoomaster/radar[0]/antenna-x", 1.0);
@@ -64,7 +64,7 @@
 		<object-name>RCapaturbofan.003</object-name>
 		<property-base>sim/model/livery</property-base>
 		<texture-prop>texture</texture-prop>
-		<texture>Pegasus.png</texture>
+		<texture>Liveries/AST/Pegasus.png</texture>
 		</animation>
 		-->
 
