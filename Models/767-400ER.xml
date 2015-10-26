@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-	<path>767-300.ac</path>
+	<path>767-400.ac</path>
 		<offsets>
 		<x-m> 0.0</x-m>
 		<y-m> 0.0</y-m>
@@ -13,13 +13,13 @@
 	<!-- Livery System for MP -->
 	<nasal>
 		<load>
-			var rplayer = cmdarg();
+			<!--var rplayer = cmdarg();
 			# Set up property aliases for animations.
-			rplayer.getNode("voodoomaster/radar[0]/antenna-r", 1).alias(rplayer.getNode("sim/multiplay/generic/int[10]"));
+			rplayer.getNode("voodoomaster/radar[0]/antenna-r", 1).alias(rplayer.getNode("sim/multiplay/generic/int[10]"));-->
 
   			var livery_update = aircraft.livery_update.new("Aircraft/767/Models/Liveries/767-400ER", 10);
 
-			setprop("voodoomaster/radar[0]/device", "Sentry");
+		<!--	setprop("voodoomaster/radar[0]/device", "Sentry");
 			setprop("voodoomaster/radar[0]/antenna-x", 1.0);
 			setprop("voodoomaster/radar[0]/antenna-y", 1.0);
 			setprop("voodoomaster/radar[0]/antenna-z", 1.0);
@@ -36,7 +36,7 @@
 			setprop("voodoomaster/refuel[2]/probe-extended", 0);
 
 			setprop("voodoomaster/refuel[3]/device", "RefuelProbe");
-			setprop("voodoomaster/refuel[3]/probe-extended", 0);
+			setprop("voodoomaster/refuel[3]/probe-extended", 0);-->
 
 		</load>
 

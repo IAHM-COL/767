@@ -28,7 +28,7 @@
 		</rating>
 
 		<flight-model>jsb</flight-model>
-  		<aero>767-300JWocky</aero>
+  		<aero>767-400ER</aero>
 		<engine>PW4062</engine>
 
 		<!-- Splash screen while loading -->
@@ -39,7 +39,7 @@
 		<!-- Settings for model -->
 		<model>
 			<!-- Path to main model file -->
-			<path>Aircraft/767/Models/FlyingWorkshop.xml</path>
+			<path>Aircraft/767/Models/767-400ER.xml</path>
 
 			<!-- JPack: push forces for Voodoomaster Pushback -->
 			<pushback>
