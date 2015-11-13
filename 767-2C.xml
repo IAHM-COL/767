@@ -14,13 +14,13 @@
 	</fileheader>
 
 	<!--
-		File:     767-300JWocky.xml
+		File:     767-2C.xml
 		Inputs:
-			name:          767-300JWocky
+			name:          767-2C
 			type:          two-engine transonic transport
-			max weight:    415000 lb (415000 f. KC-46+ E-767+Workshop, 412000 f. -300ER, 350000 f. -300)
+			max weight:    415000 lb (415000 f. KC-46/2C + E-767+Workshop, 412000 f. -300ER, 350000 f. -300)
 			wing span:     156.1 ft
-			length:        180.25 ft
+			length:        159.17 ft
 			wing area:     3050 sq-ft
 			gear type:     tricycle
 			retractable?:  yes
@@ -86,9 +86,9 @@
 			</location>
 		</pointmass> 
 
-		<pointmass name="Refuel ops">
+		<pointmass name="Extra seats">
 			<description>Careful, can be overloaded! Different configurations for different missions!</description>
-			<weight unit="LBS">  400.0000 </weight>
+			<weight unit="LBS">  0.0000 </weight>
 			<location name="CREW" unit="IN">
 				<x>   600.00 </x>
 				<y>     0.00 </y>
@@ -96,7 +96,7 @@
 			</location>
 		</pointmass> 
 
-		<pointmass name="AirVac">
+		<pointmass name="Upper Deck Cargo">
 			<description>Careful, can be overloaded! Different configurations for different missions!</description>
 			<weight unit="LBS"> 0.0000 </weight>
 			<location name="Tech ops" unit="IN">
@@ -106,11 +106,21 @@
 			</location>
 		</pointmass> 
 
-		<pointmass name="Load">
+		<pointmass name="Lower Deck Forward Cargo">
 			<description>Careful, can be overloaded! Different configurations for different missions!</description>
 			<weight unit="LBS"> 0.0000 </weight>
 			<location name="Tech ops" unit="IN">
-				<x>  	0.00 </x>
+				<x>  -100.00 </x>
+				<y>     0.00 </y>
+				<z>   -54.07 </z>
+			</location>
+		</pointmass> 
+
+		<pointmass name="Lower Deck Aft Cargo">
+			<description>Careful, can be overloaded! Different configurations for different missions!</description>
+			<weight unit="LBS"> 0.0000 </weight>
+			<location name="Tech ops" unit="IN">
+				<x>   100.00 </x>
 				<y>     0.00 </y>
 				<z>   -54.07 </z>
 			</location>
@@ -273,7 +283,7 @@
 				<z>  -54.07 </z>
 			</location>
 			<priority>1</priority>
-			<capacity unit="LBS"> 42000.00 </capacity>
+			<capacity unit="LBS"> 25830.00 </capacity>
 			<contents unit="LBS"> 0.00 </contents>
 		</tank>
 
@@ -284,7 +294,7 @@
 				<z>  -54.07 </z>
 			</location>
 			<priority>3</priority>
-			<capacity unit="LBS"> 42499.00 </capacity>
+			<capacity unit="LBS"> 31920.00 </capacity>
 			<contents unit="LBS"> 0.00 </contents>
 		</tank>
 
@@ -295,7 +305,7 @@
 				<z>  -54.07 </z>
 			</location>
 			<priority>1</priority>
-			<capacity unit="LBS"> 42000.00 </capacity>
+			<capacity unit="LBS"> 26250.00 </capacity>
 			<contents unit="LBS"> 0.00 </contents>
 		</tank>
 
