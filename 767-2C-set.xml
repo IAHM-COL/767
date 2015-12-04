@@ -368,7 +368,7 @@
 					</item>
 				</menu>
 				<menu n="100">
-					<label>Pegasus</label>
+					<label>767-2C</label>
 					<enabled type="bool">true</enabled>
 
 					<item>
@@ -376,72 +376,6 @@
 						<binding>
 							<command>property-toggle</command>
 							<property>sim/model/start-idling</property>
-						</binding>
-					</item>
-
-					<item>
-						<label>Extend Boom</label>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel/boom-angle</property>
-							<value>0.6</value>
-						</binding>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel/boom-extend</property>
-							<value>1.0</value>
-						</binding>
-					</item>
-
-					<item>
-						<label>Retract Boom</label>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel/boom-angle</property>
-							<value>0.0</value>
-						</binding>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel/boom-extend</property>
-							<value>0.0</value>
-						</binding>
-					</item>
-
-					<item>
-						<label>Extend Probes</label>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel[1]/probe-extended</property>
-							<value>true</value>
-						</binding>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel[2]/probe-extended</property>
-							<value>true</value>
-						</binding>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel[3]/probe-extended</property>
-							<value>true</value>
-						</binding>
-					</item>
-
-					<item>
-						<label>Retract Probes</label>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel[1]/probe-extended</property>
-							<value>false</value>
-						</binding>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel[2]/probe-extended</property>
-							<value>false</value>
-						</binding>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel[3]/probe-extended</property>
-							<value>false</value>
 						</binding>
 					</item>
 
@@ -746,18 +680,74 @@
 		</generic>
 	</multiplay>
 
-	<tanker type="bool">true</tanker>
+	<tanker type="bool">false</tanker>
+	
+	<limits>
+		<vne>380</vne>
+ 
+		<max-positive-g>4.4</max-positive-g>
+		<max-negative-g>-1.76</max-negative-g>
+ 
+		<max-flap-extension-speed n="0">
+			<flaps>0.167</flaps>
+			<speed>255</speed>
+		</max-flap-extension-speed>
+		<max-flap-extension-speed n="1">
+			<flaps>0.333</flaps>
+			<speed>235</speed>
+		</max-flap-extension-speed>
+		<max-flap-extension-speed n="2">
+			<flaps>0.667</flaps>
+			<speed>215</speed>
+		</max-flap-extension-speed>
+		<max-flap-extension-speed n="3">
+			<flaps>0.833</flaps>
+			<speed>205</speed>
+		</max-flap-extension-speed>
+		<max-flap-extension-speed n="4">
+			<flaps>1.000</flaps>
+			<speed>195</speed>
+		</max-flap-extension-speed>
+		<max-flap-extension-speed n="5">
+			<flaps>1.000</flaps>
+			<speed>185</speed>
+		</max-flap-extension-speed>
+		<max-flap-extension-speed n="6">
+			<flaps>1.000</flaps>
+			<speed>175</speed>
+		</max-flap-extension-speed>
+		<max-flap-extension-speed n="7">
+			<flaps>1.000</flaps>
+			<speed>165</speed>
+		</max-flap-extension-speed>
+		<max-flap-extension-speed n="8">
+			<flaps>1.000</flaps>
+			<speed>160</speed>
+		</max-flap-extension-speed>
+
+		<max-gear-extension-speed>220</max-gear-extension-speed>
+
+		<mass-and-balance>
+			<maximum-ramp-mass-lbs>435000</maximum-ramp-mass-lbs>
+			<maximum-takeoff-mass-lbs>415000</maximum-takeoff-mass-lbs>
+			<maximum-landing-mass-lbs>320000</maximum-landing-mass-lbs>
+			<maximum-zero-fuel-mass-lbs>295000</maximum-zero-fuel-mass-lbs>
+		</mass-and-balance>
+	</limits>
 
 	<autopilot>
 
 		<settings>
 			<kts-mach-select type="string">kts</kts-mach-select>
-			<max-pitch type="float">6.0</max-pitch>
-			<bank-angle-limit-deg type="int">45</bank-angle-limit-deg>
+			<max-pitch type="float"> 6.0</max-pitch>
+			<min-pitch type="float">-4.0</min-pitch>
+			<bank-angle-limit-deg type="int">35</bank-angle-limit-deg>
 		</settings>
 
 		<internal>
-			<max-pitch type="float">6.0</max-pitch>
+			<target-pitch-deg type="float">0.00</target-pitch-deg>
+			<max-pitch type="float"> 6.0</max-pitch>
+			<min-pitch type="float">-4.0</min-pitch>
 		</internal>
 
 	</autopilot>

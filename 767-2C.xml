@@ -100,7 +100,7 @@
 			<description>Careful, can be overloaded! Different configurations for different missions!</description>
 			<weight unit="LBS"> 0.0000 </weight>
 			<location name="Tech ops" unit="IN">
-				<x>  -400.00 </x>
+				<x>   -10.00 </x>
 				<y>     0.00 </y>
 				<z>   -54.07 </z>
 			</location>
@@ -110,7 +110,7 @@
 			<description>Careful, can be overloaded! Different configurations for different missions!</description>
 			<weight unit="LBS"> 0.0000 </weight>
 			<location name="Tech ops" unit="IN">
-				<x>  -100.00 </x>
+				<x>  -180.00 </x>
 				<y>     0.00 </y>
 				<z>   -54.07 </z>
 			</location>
@@ -120,7 +120,7 @@
 			<description>Careful, can be overloaded! Different configurations for different missions!</description>
 			<weight unit="LBS"> 0.0000 </weight>
 			<location name="Tech ops" unit="IN">
-				<x>   100.00 </x>
+				<x>   200.00 </x>
 				<y>     0.00 </y>
 				<z>   -54.07 </z>
 			</location>
@@ -322,7 +322,7 @@
 
 	</propulsion>
 
-	<flight_control name="FCS: 767-300JWocky">
+	<flight_control name="FCS: 767-2C">
 
 		<channel name="Pitch">
 
@@ -590,10 +590,10 @@
 					<table>
 						<independentVar lookup="row">aero/alpha-rad</independentVar>
 						<tableData>
-							-0.20 -0.580
-							 0.00  0.200
-							 0.23  1.200
-							 0.60  0.600
+							-0.20 -0.880
+							 0.00  0.500
+							 0.23  1.500
+							 0.60  0.900
 						</tableData>
 					</table>
 				</product>
