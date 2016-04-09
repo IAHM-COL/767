@@ -3,12 +3,12 @@
 # Original by Syd Adams and Liam Gathercole, rewritten by Peter Brendt                              #
 #####################################################################################################
 
-var hstr="Aircraft/767/Models/Liveries/"~getprop("/sim/aero");
+var hstr="Aircraft/767/Models/Liveries/"~getprop("/sim/variant");
 print(hstr);
 aircraft.livery.init(hstr);
-#aircraft.livery.init("Aircraft/767/Models/Liveries");
 
-var SndOut = props.globals.getNode("/sim/sound/Ovolume",1);
+var SoundOutside = props.globals.getNode("/sim/sound/OVolume",1);
+var SoundInside = props.globals.getNode("/sim/sound/IVolume",1);
 var FHmeter = aircraft.timer.new("/instrumentation/clock/flight-meter-sec", 10).stop();
 var fuel_density =0;
 
@@ -362,14 +362,16 @@ var RHeng=Engine.new(1);
 var wiper = Wiper.new("controls/electric/wipers","systems/electrical/bus-volts");
 
 setlistener("/sim/signals/fdm-initialized", func {
-	SndOut.setDoubleValue(0.15);
+	SoundOutside.setDoubleValue(0.15);
+	SoundInside.setDoubleValue(1.00);
 	setprop("/instrumentation/clock/flight-meter-hour",0);
 	setprop("/instrumentation/groundradar/id",getprop("sim/tower/airport-id"));
 	settimer(update_systems,2);
 });
 
 setlistener("/sim/signals/reinit", func {
-	SndOut.setDoubleValue(0.15);
+	SoundOutside.setDoubleValue(0.15);
+	SoundInside.setDoubleValue(1.00);
 	setprop("/instrumentation/clock/flight-meter-hour",0);
 	Shutdown();
 });
@@ -386,14 +388,17 @@ setlistener("/sim/signals/reinit", func {
 
 setlistener("/sim/current-view/internal", func(vw) {
 	if(vw.getValue()) {
-		SndOut.setDoubleValue(0.3);
+		SoundOutside.setDoubleValue(0.3);
+		SoundInside.setDoubleValue(1.0);
 	} else {
-		SndOut.setDoubleValue(1.0);
+		SoundOutside.setDoubleValue(1.0);
+		SoundInside.setDoubleValue(0.3);
 	}
 },1,0);
 
 setlistener("/sim/model/start-idling", func(idle) {
 	var run= idle.getBoolValue();
+print("##### Startup procedure triggered");
 	if (run) {
 		Startup();
 	} else {

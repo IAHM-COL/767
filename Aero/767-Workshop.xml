@@ -322,7 +322,7 @@
 
 	</propulsion>
 
-	<flight_control name="FCS: 767-300JWocky">
+	<flight_control name="FCS: 767-Workshop">
 
 		<channel name="Pitch">
 

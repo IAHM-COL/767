@@ -28,12 +28,12 @@
 		</rating>
 
 		<flight-model>jsb</flight-model>
-  		<aero>767-2C</aero>
-		<engine>PW4062</engine>
+  		<aero>Aero/767-2C</aero>
+		<variant>767-2C</variant>
 
 		<!-- Splash screen while loading -->
 		<startup>
-			<splash-texture>Aircraft/767/splash.png</splash-texture>
+			<splash-texture>Aircraft/767/Splashes/splash.png</splash-texture>
 		</startup>
 
 		<!-- Settings for model -->
