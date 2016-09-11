@@ -14,13 +14,13 @@
 	</fileheader>
 
 	<!--
-		File:     767-300JWocky.xml
+		File:     767-2C.xml
 		Inputs:
-			name:          767-300JWocky
+			name:          767-2C
 			type:          two-engine transonic transport
-			max weight:    415000 lb (415000 f. KC-46+ E-767+Workshop, 412000 f. -300ER, 350000 f. -300)
+			max weight:    415000 lb (415000 f. KC-46/2C + E-767+Workshop, 412000 f. -300ER, 350000 f. -300)
 			wing span:     156.1 ft
-			length:        180.25 ft
+			length:        159.17 ft
 			wing area:     3050 sq-ft
 			gear type:     tricycle
 			retractable?:  yes
@@ -71,7 +71,7 @@
 		<izz unit="SLUG*FT2">   9220445 </izz>
 		<emptywt unit="LBS" >    198440 </emptywt>
 		<location name="CG" unit="IN">
-			<x> -30.00 </x>
+			<x> -20.00 </x>
 			<y>   0.00 </y>
 			<z> -54.07 </z>
 		</location>
@@ -86,9 +86,9 @@
 			</location>
 		</pointmass> 
 
-		<pointmass name="Refuel ops">
+		<pointmass name="Extra seats">
 			<description>Careful, can be overloaded! Different configurations for different missions!</description>
-			<weight unit="LBS">  400.0000 </weight>
+			<weight unit="LBS">  0.0000 </weight>
 			<location name="CREW" unit="IN">
 				<x>   600.00 </x>
 				<y>     0.00 </y>
@@ -96,31 +96,31 @@
 			</location>
 		</pointmass> 
 
-		<pointmass name="Tech ops">
+		<pointmass name="Upper Deck Cargo">
 			<description>Careful, can be overloaded! Different configurations for different missions!</description>
-			<weight unit="LBS"> 3000.0000 </weight>
+			<weight unit="LBS"> 0.0000 </weight>
 			<location name="Tech ops" unit="IN">
-				<x>  -400.00 </x>
+				<x>   -10.00 </x>
 				<y>     0.00 </y>
 				<z>   -54.07 </z>
 			</location>
 		</pointmass> 
 
-		<pointmass name="Radar ops">
+		<pointmass name="Lower Deck Forward Cargo">
 			<description>Careful, can be overloaded! Different configurations for different missions!</description>
-			<weight unit="LBS"> 600.0000 </weight>
+			<weight unit="LBS"> 0.0000 </weight>
+			<location name="Tech ops" unit="IN">
+				<x>  -180.00 </x>
+				<y>     0.00 </y>
+				<z>   -54.07 </z>
+			</location>
+		</pointmass> 
+
+		<pointmass name="Lower Deck Aft Cargo">
+			<description>Careful, can be overloaded! Different configurations for different missions!</description>
+			<weight unit="LBS"> 0.0000 </weight>
 			<location name="Tech ops" unit="IN">
 				<x>   200.00 </x>
-				<y>     0.00 </y>
-				<z>   -54.07 </z>
-			</location>
-		</pointmass> 
-
-		<pointmass name="Spare parts">
-			<description>Careful, can be overloaded! Different configurations for different missions!</description>
-			<weight unit="LBS"> 65000.0000 </weight>
-			<location name="Tech ops" unit="IN">
-				<x>  	0.00 </x>
 				<y>     0.00 </y>
 				<z>   -54.07 </z>
 			</location>
@@ -132,7 +132,7 @@
 
 		<contact type="BOGEY" name="NOSE">
 			<location unit="IN">
-				<x> -980.19 </x>
+				<x> -1080.19 </x>
 				<y>    0.00 </y>
 				<z>  -63.00 </z>
 			</location>
@@ -142,7 +142,7 @@
 			<spring_coeff unit="LBS/FT">      247200.00 </spring_coeff>
 			<damping_coeff unit="LBS/FT/SEC"> 206000.00 </damping_coeff>
 			<damping_coeff_rebound unit="LBS/FT/SEC">150000</damping_coeff_rebound>
-			<max_steer unit="DEG"> 25.00 </max_steer>
+			<max_steer unit="DEG"> 45.00 </max_steer>
 			<brake_group>NONE</brake_group>
 			<retractable>1</retractable>
 		</contact>
@@ -283,7 +283,7 @@
 				<z>  -54.07 </z>
 			</location>
 			<priority>1</priority>
-			<capacity unit="LBS"> 42000.00 </capacity>
+			<capacity unit="LBS"> 25830.00 </capacity>
 			<contents unit="LBS"> 0.00 </contents>
 		</tank>
 
@@ -294,7 +294,7 @@
 				<z>  -54.07 </z>
 			</location>
 			<priority>3</priority>
-			<capacity unit="LBS"> 42499.00 </capacity>
+			<capacity unit="LBS"> 31920.00 </capacity>
 			<contents unit="LBS"> 0.00 </contents>
 		</tank>
 
@@ -305,7 +305,7 @@
 				<z>  -54.07 </z>
 			</location>
 			<priority>1</priority>
-			<capacity unit="LBS"> 42000.00 </capacity>
+			<capacity unit="LBS"> 26250.00 </capacity>
 			<contents unit="LBS"> 0.00 </contents>
 		</tank>
 
@@ -322,7 +322,7 @@
 
 	</propulsion>
 
-	<flight_control name="FCS: 767-300JWocky">
+	<flight_control name="FCS: 767-2C">
 
 		<channel name="Pitch">
 

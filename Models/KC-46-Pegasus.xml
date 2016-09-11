@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-	<path>Pegasus.ac</path>
+	<path>KC-46-Pegasus.ac</path>
 		<offsets>
 		<x-m> 0.0</x-m>
 		<y-m> 0.0</y-m>
@@ -10,21 +10,14 @@
 		<pitch-deg>-1.0</pitch-deg>
 	</offsets>
 
-	
-	<!--Disables the Livery System on the Pegasus
+	<!-- Livery System for MP -->
 	<nasal>
 		<load>
 			var rplayer = cmdarg();
 			# Set up property aliases for animations.
 			rplayer.getNode("voodoomaster/radar[0]/antenna-r", 1).alias(rplayer.getNode("sim/multiplay/generic/int[10]"));
 
-  			var livery_update = aircraft.livery_update.new("Aircraft/767/Models/Liveries/KC-46TT", 10);
-
-			setprop("voodoomaster/radar[0]/device", "Sentry");
-			setprop("voodoomaster/radar[0]/antenna-x", 1.0);
-			setprop("voodoomaster/radar[0]/antenna-y", 1.0);
-			setprop("voodoomaster/radar[0]/antenna-z", 1.0);
-			setprop("voodoomaster/radar[0]/antenna-r", 1);
+  			var livery_update = aircraft.livery_update.new("Aircraft/767/Models/Liveries/767-Workshop", 10);
 
 			setprop("voodoomaster/refuel[0]/device", "RefuelBoom");
 			setprop("voodoomaster/refuel[0]/boom-angle", 0.0);
@@ -45,10 +38,8 @@
 			livery_update.stop();
 		</unload>
 	</nasal>
-	-->
 
 	<!-- Livery Selection Animation -->
-	<!--
 	<animation>
 		<type>material</type>
 		<object-name>Fuselage</object-name>
@@ -65,8 +56,7 @@
 		<property-base>sim/model/livery</property-base>
 		<texture-prop>texture</texture-prop>
 		<texture>Liveries/KC-46TT/Pegasus.png</texture>
-		</animation>
-		-->
+	</animation>
 
 	<!-- Shaders -->
 	<effect>

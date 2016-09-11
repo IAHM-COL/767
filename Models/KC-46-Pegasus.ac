@@ -21,7 +21,7 @@ kids 206
 OBJECT poly
 name "CylInternalTurbofan"
 loc -6.7163858 -4.3293600 7.8155599
-texture "Liveries/KC-46TT/Pegasus.png"
+texture "Liveries/KC-46-Pegasus/Pegasus.png"
 texrep 1 1
 numvert 84
 -0.7315940 -0.0000024 -16.7667007
@@ -4767,7 +4767,7 @@ kids 0
 OBJECT poly
 name "LpieceTurbofan.007"
 loc -29.0482044 -6.3560901 -0.0003399
-texture "Liveries/KC-46TT/Pegasus.png"
+texture "Liveries/KC-46-Pegasus/Pegasus.png"
 texrep 1 1
 numvert 42
 20.8160992 2.8945301 6.6816401
@@ -5030,7 +5030,7 @@ loc -29.0482044 -6.3560901 -0.0003399
 kids 1
 OBJECT poly
 name "LdiskFan.002"
-texture "Liveries/KC-46TT/Pegasus.png"
+texture "Liveries/KC-46-Pegasus/Pegasus.png"
 texrep 1 1
 numvert 3
 20.8293991 0.7753910 7.7851601
@@ -5047,7 +5047,7 @@ kids 0
 OBJECT poly
 name "LCapaturbofan.004"
 loc -29.0482044 -6.3560901 -0.0003399
-texture "Liveries/KC-46TT/Pegasus.png"
+texture "Liveries/KC-46-Pegasus/Pegasus.png"
 texrep 1 1
 numvert 194
 22.2700996 0.6826170 7.8339801
@@ -6971,7 +6971,7 @@ kids 0
 OBJECT poly
 name "LfConeTurbofan"
 loc -29.0482044 -6.3560901 -0.0003399
-texture "Liveries/KC-46TT/Pegasus.png"
+texture "Liveries/KC-46-Pegasus/Pegasus.png"
 texrep 1 1
 numvert 96
 19.7516003 2.7529299 6.9472699
@@ -7843,7 +7843,7 @@ kids 0
 OBJECT poly
 name "LmbConeTurbofan.002"
 loc -29.0482044 -6.3560901 -0.0003399
-texture "Liveries/KC-46TT/Pegasus.png"
+texture "Liveries/KC-46-Pegasus/Pegasus.png"
 texrep 1 1
 numvert 36
 23.8544006 1.8413100 9.0332003
@@ -8166,7 +8166,7 @@ loc -29.0482044 -6.3560901 -0.0003399
 kids 1
 OBJECT poly
 name "RdiskFan.001"
-texture "Liveries/KC-46TT/Pegasus.png"
+texture "Liveries/KC-46-Pegasus/Pegasus.png"
 texrep 1 1
 numvert 3
 20.8293991 0.7753900 -7.7812500
@@ -8183,7 +8183,7 @@ kids 0
 OBJECT poly
 name "RCapaturbofan.003"
 loc -29.0482044 -6.3560901 -0.0003399
-texture "Liveries/KC-46TT/Pegasus.png"
+texture "Liveries/KC-46-Pegasus/Pegasus.png"
 texrep 1 1
 numvert 192
 22.3153992 1.5556600 -6.5527301
@@ -10105,7 +10105,7 @@ kids 0
 OBJECT poly
 name "RfConeTurbofan"
 loc -29.0482044 -6.3560901 -0.0003399
-texture "Liveries/KC-46TT/Pegasus.png"
+texture "Liveries/KC-46-Pegasus/Pegasus.png"
 texrep 1 1
 numvert 96
 19.6835995 2.9643600 -8.1660204
@@ -10977,7 +10977,7 @@ kids 0
 OBJECT poly
 name "RmbConeTurbofan.001"
 loc -29.0482044 -6.3560901 -0.0003399
-texture "Liveries/KC-46TT/Pegasus.png"
+texture "Liveries/KC-46-Pegasus/Pegasus.png"
 texrep 1 1
 numvert 38
 23.9263000 2.6845701 -6.9511700
@@ -11317,7 +11317,7 @@ kids 0
 OBJECT poly
 name "RpieceTurbofan.009"
 loc -29.0482044 -6.3560901 -0.0003399
-texture "Liveries/KC-46TT/Pegasus.png"
+texture "Liveries/KC-46-Pegasus/Pegasus.png"
 texrep 1 1
 numvert 27
 21.0070992 2.8681600 -6.7246099
@@ -15238,7 +15238,7 @@ kids 0
 OBJECT poly
 name "Fuselage"
 loc -2.2198458 -1.8126401 0.0016143
-texture "Liveries/KC-46TT/Pegasus.png"
+texture "Liveries/KC-46-Pegasus/Pegasus.png"
 texrep 1 1
 numvert 1690
 -24.2500000 -0.2270510 -0.0019542
@@ -36038,7 +36038,7 @@ kids 0
 OBJECT poly
 name "Glass_Fuselage.001"
 loc -5.0351858 -1.7230401 0.0016143
-texture "Liveries/KC-46TT/Pegasus.png"
+texture "Liveries/KC-46-Pegasus/Pegasus.png"
 texrep 1 1
 numvert 24
 -8.4602900 2.6106000 -0.0195318
@@ -36238,7 +36238,7 @@ kids 0
 OBJECT poly
 name "Glass_Fuselage.002"
 loc -5.0351858 -1.7230401 0.0016143
-texture "Liveries/KC-46TT/Pegasus.png"
+texture "Liveries/KC-46-Pegasus/Pegasus.png"
 texrep 1 1
 numvert 20
 -6.4148502 -2.5695801 -0.9765620
@@ -36458,7 +36458,7 @@ kids 0
 OBJECT poly
 name "Glass_Fuselage.003"
 loc -5.0351858 -1.7230401 0.0016143
-texture "Liveries/KC-46TT/Pegasus.png"
+texture "Liveries/KC-46-Pegasus/Pegasus.png"
 texrep 1 1
 numvert 24
 14.9357996 -2.6115699 0.7695310
@@ -36728,7 +36728,7 @@ kids 1
 OBJECT poly
 name "LdoorNoseGear"
 loc 2.2299118 0.0000000 0.0000001
-texture "Liveries/KC-46TT/Pegasus.png"
+texture "Liveries/KC-46-Pegasus/Pegasus.png"
 texrep 1 1
 numvert 18
 3.6026800 2.2804799 -0.0026155
@@ -36898,7 +36898,7 @@ kids 0
 OBJECT poly
 name "GDR"
 loc -22.7949944 -4.3541298 -0.5540499
-texture "Liveries/KC-46TT/Pegasus.png"
+texture "Liveries/KC-46-Pegasus/Pegasus.png"
 texrep 1 1
 numvert 32
 -0.4120920 0.2874860 0.5632440
@@ -77017,7 +77017,7 @@ kids 1
 OBJECT poly
 name "VStab.002"
 loc -1.9904995 0.0000000 0.0000000
-texture "Liveries/KC-46TT/Pegasus.png"
+texture "Liveries/KC-46-Pegasus/Pegasus.png"
 texrep 1 1
 numvert 6
 48.7335014 6.7402301 -0.1953130
@@ -89654,7 +89654,7 @@ kids 0
 OBJECT poly
 name "RCapaturbofan.001"
 loc -29.0482044 -6.3560901 -0.0003399
-texture "Liveries/KC-46TT/Pegasus.png"
+texture "Liveries/KC-46-Pegasus/Pegasus.png"
 texrep 1 1
 numvert 278
 23.5499992 2.4184599 -6.7988300
@@ -92435,7 +92435,7 @@ kids 0
 OBJECT poly
 name "LCapaturbofan.001"
 loc -29.0482044 -6.3560901 -0.0003399
-texture "Liveries/KC-46TT/Pegasus.png"
+texture "Liveries/KC-46-Pegasus/Pegasus.png"
 texrep 1 1
 numvert 279
 22.6084995 1.5542001 9.1289101
@@ -120342,7 +120342,7 @@ kids 1
 OBJECT poly
 name "VStab"
 loc -1.9904995 0.0000000 0.0000000
-texture "Liveries/KC-46TT/Pegasus.png"
+texture "Liveries/KC-46-Pegasus/Pegasus.png"
 texrep 1 1
 numvert 7
 54.2202988 15.4477997 0.0800786
@@ -120403,7 +120403,7 @@ kids 1
 OBJECT poly
 name "VStab.001"
 loc -1.9904995 0.0000000 0.0000000
-texture "Liveries/KC-46TT/Pegasus.png"
+texture "Liveries/KC-46-Pegasus/Pegasus.png"
 texrep 1 1
 numvert 89
 45.5667000 7.4414101 -0.3808580
@@ -121394,7 +121394,7 @@ kids 0
 OBJECT poly
 name "VRudder"
 loc 20.7935944 4.6123700 -0.0169414
-texture "Liveries/KC-46TT/Pegasus.png"
+texture "Liveries/KC-46-Pegasus/Pegasus.png"
 texrep 1 1
 numvert 14
 2.3879700 4.4792500 0.0966811

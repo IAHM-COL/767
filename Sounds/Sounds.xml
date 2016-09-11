@@ -25,7 +25,7 @@
 				<max>1</max>
 			</volume>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<position>
 				<x>2.75</x>
@@ -55,7 +55,7 @@
 				<max>0.6</max>
 			</volume>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<position>
 				<x>-5.7</x>
@@ -63,7 +63,7 @@
 				<z>-3</z>
 			</position>
 			<reference-dist>10.0</reference-dist>
-			<max-dist>30.0</max-dist>
+			<max-dist>500.0</max-dist>
 		</engine>
 
 		<engine>
@@ -75,7 +75,7 @@
 				<and>
 					<not>
 						<greater-than>
-							<property>/position/altitude-ft</property>
+							<property>/position/altitude-agl-ft</property>
 							<value>500</value>
 						</greater-than>
 					</not>
@@ -95,7 +95,7 @@
 				<max>0.6</max>
 			</volume>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<position>
 				<x>-5.7</x>
@@ -103,7 +103,7 @@
 				<z>-3</z>
 			</position>
 			<reference-dist>10.0</reference-dist>
-			<max-dist>30.0</max-dist>
+			<max-dist>500.0</max-dist>
 		</engine>
 
 		<engine>
@@ -122,7 +122,7 @@
 				<max>1.0</max>
 			</volume>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<position>
 				<x>2.75</x>
@@ -145,7 +145,7 @@
 				<max>0.6</max>
 			</volume>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<pitch>
 				<property>/engines/engine[1]/rpm</property>
@@ -160,7 +160,7 @@
 				<z>-3</z>
 			</position>
 			<reference-dist>10.0</reference-dist>
-			<max-dist>30.0</max-dist>
+			<max-dist>500.0</max-dist>
 		</engine>
 
 
@@ -173,7 +173,7 @@
 				<and>
 					<not>
 						<greater-than>
-							<property>/position/altitude-ft</property>
+							<property>/position/altitude-agl-ft</property>
 							<value>500</value>
 						</greater-than>
 					</not>
@@ -193,7 +193,7 @@
 				<max>0.6</max>
 			</volume>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<position>
 				<x>-5.7</x>
@@ -201,7 +201,7 @@
 				<z>-3</z>
 			</position>
 			<reference-dist>10.0</reference-dist>
-			<max-dist>30.0</max-dist>
+			<max-dist>500.0</max-dist>
 		</engine>
 
 		<pneumatic>
@@ -212,7 +212,7 @@
 				 <property>/controls/gear/brake-parking</property>
 			</condition>
 			<volume>
-				<factor>1</factor>
+				<property>sim/sound/OVolume</property>
 			</volume>
 		</pneumatic>
 
@@ -224,7 +224,7 @@
 				<not><property>/controls/gear/brake-parking</property></not>
 			</condition>
 			<volume>
-				<factor>1</factor>
+				<property>sim/sound/OVolume</property>
 			</volume>
 		</pneumatic>		
 
@@ -244,13 +244,16 @@
 				<type>log</type>
 				<factor>0.5</factor>
 			</volume>
+			<volume>
+				<property>sim/sound/IVolume</property>
+			</volume>
 			<position>
 				<x>-10</x>
 				<y>0</y>
 				<z>-5</z>
 			</position>
 			<reference-dist>10.0</reference-dist>
-			<max-dist>25.0</max-dist>
+			<max-dist>500.0</max-dist>
 		</rumble>
 
 		<gear1>
@@ -268,8 +271,11 @@
 				<y>0</y>
 				<z>-5</z>
 			</position>
+			<volume>
+				<property>sim/sound/IVolume</property>
+			</volume>
 			<reference-dist>5.0</reference-dist>
-			<max-dist>10.0</max-dist>
+			<max-dist>100.0</max-dist>
 		</gear1>
 
 		<gear1>
@@ -286,8 +292,11 @@
 				<y>0</y>
 				<z>-5</z>
 			</position>
+			<volume>
+				<property>sim/sound/IVolume</property>
+			</volume>
 			<reference-dist>10.0</reference-dist>
-			<max-dist>20.0</max-dist>
+			<max-dist>100.0</max-dist>
 		</gear1>
 
 		<squeal0>
@@ -301,7 +310,7 @@
 				</or>
 			</condition>
 			<volume>
-				<property>sim/sound/Ovolume</property>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<volume>
 				<property>/velocities/speed-down-fps</property>
@@ -327,7 +336,7 @@
 				<z>-5</z>
 			</position>
 			<reference-dist>20.0</reference-dist>
-			<max-dist>40.0</max-dist>
+			<max-dist>400.0</max-dist>
 		</squeal0>
 
 		<squeal1>
@@ -348,6 +357,9 @@
 				<internal>dt_stop</internal>
 				<factor>0.05</factor>
 				<max>1.0</max>
+			</volume>
+			<volume>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<pitch>
 				<property>/velocities/airspeed-kt</property>
@@ -371,8 +383,11 @@
 				<y>0</y>
 				<z>0</z>
 			</position>
+			<volume>
+				<property>sim/sound/OVolume</property>
+			</volume>
 			<reference-dist>5.0</reference-dist>
-			<max-dist>10.0</max-dist>
+			<max-dist>100.0</max-dist>
 		</flap>
 
 		<wind>
@@ -393,6 +408,9 @@
 				<min>0.03</min>
 				<max>0.25</max>
 			</volume>
+			<volume>
+				<property>sim/sound/OVolume</property>
+			</volume>
 			<pitch>
 				<property>/velocities/airspeed-kt</property>
 				<factor>0.01</factor>
@@ -404,7 +422,7 @@
 				<z>0.8</z>
 			</position>
 			<reference-dist>1.0</reference-dist>
-			<max-dist>2.0</max-dist>
+			<max-dist>200.0</max-dist>
 		</wind>
 
 		<stall>
@@ -430,7 +448,7 @@
 				</and>
 			</condition>
 			<volume>
-				<max>0.5</max>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<position>
 				<x>-23</x>
@@ -438,7 +456,7 @@
 				<z>1</z>
 			</position>
 			<reference-dist>1.0</reference-dist>
-			<max-dist>2.0</max-dist>
+			<max-dist>200.0</max-dist>
 		</stall>
 
 		<stall>
@@ -460,7 +478,7 @@
 				</and>
 			</condition>
 			<volume>
-				<max>0.5</max>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<position>
 				<x>-22</x>
@@ -468,37 +486,7 @@
 				<z>0</z>
 			</position>
 			<reference-dist>1.0</reference-dist>
-			<max-dist>2.0</max-dist>
-		</stall>
-
-		<stall>
-			<name>stall</name>
-			<mode>looped</mode>
-			<path>/Aircraft/767/Sounds/stall.wav</path>
-			<condition>
-				<and>
-					<less-than>
-						<property>velocities/airspeed-kt</property>
-						<value>120</value>
-					</less-than>
-					<not>
-						<property>/gear/gear[0]/wow</property>
-						<property>/gear/gear[1]/wow</property>
-						<property>/gear/gear[2]/wow</property>
-						<property>/surface-positions/flap-pos-norm</property>
-					</not>
-				</and>
-			</condition>
-			<volume>
-				<max>0.5</max>
-			</volume>
-			<position>
-				<x>-22</x>
-				<y>0</y>
-				<z>0</z>
-			</position>
-			<reference-dist>1.0</reference-dist>
-			<max-dist>2.0</max-dist>
+			<max-dist>200.0</max-dist>
 		</stall>
 
 		<switch>
@@ -517,7 +505,7 @@
 				<z>1</z>
 			</position>
 			<reference-dist>1.0</reference-dist>
-			<max-dist>2.0</max-dist>
+			<max-dist>200.0</max-dist>
 		</switch>
 
 		<switch>
@@ -530,7 +518,7 @@
 				</not>
 			</condition>
 			<volume>
-				<factor>0.45</factor>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<position>
 				<x>-23</x>
@@ -538,7 +526,7 @@
 				<z>1</z>
 			</position>
 			<reference-dist>1.0</reference-dist>
-			<max-dist>2.0</max-dist>
+			<max-dist>200.0</max-dist>
 		</switch>
 
 		<speedbrake>
@@ -546,7 +534,7 @@
 			<mode>in-transit</mode>
 			<path>Aircraft/767/Sounds/whine.wav</path>
 			<volume>
-				<factor>0.45</factor>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<position>
 				<x>5</x>
@@ -554,7 +542,7 @@
 				<z>0</z>
 			</position>
 			<reference-dist>2.0</reference-dist>
-			<max-dist>5.0</max-dist>
+			<max-dist>500.0</max-dist>
 		</speedbrake>
 
 		<engines>
@@ -568,7 +556,7 @@
 				<property>surface-positions/reverser-norm[0]</property>
 			</volume>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<position>
 				<x>2.75</x>
@@ -590,7 +578,7 @@
 				<property>surface-positions/reverser-norm[1]</property>
 			</volume>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<position>
 				<x>2.75</x>
@@ -609,7 +597,7 @@
 			<path>Sounds/crash.wav</path>
 			<property>sim/crashed</property>
 			<volume>
-				<factor>1</factor>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<pitch>
 				<factor>1.5</factor>
@@ -631,7 +619,7 @@
 				</less-than-equals>
 			</condition>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<position>
 				<x>-5</x>
@@ -653,7 +641,7 @@
 				</less-than-equals>
 			</condition>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<position>
 				<x>-5</x>
@@ -675,7 +663,7 @@
 				</less-than-equals>
 			</condition>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<position>
 				<x>-5</x>
@@ -697,7 +685,7 @@
 				</less-than-equals>
 			</condition>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<position>
 				<x>-5</x>
@@ -719,7 +707,7 @@
 				</less-than-equals>
 			</condition>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<position>
 				<x>-5</x>
@@ -741,7 +729,7 @@
 				</less-than-equals>
 			</condition>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<position>
 				<x>-5</x>
@@ -763,7 +751,7 @@
 				</less-than-equals>
 			</condition>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<position>
 				<x>-5</x>
@@ -785,7 +773,7 @@
 				</less-than-equals>
 			</condition>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<position>
 				<x>-5</x>
@@ -807,7 +795,7 @@
 				</less-than-equals>
 			</condition>
 			<volume>
-			<property>sim/sound/Evolume</property>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<position>
 				<x>-5</x>
@@ -829,7 +817,7 @@
 				</less-than-equals>
 			</condition>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<position>
 				<x>-5</x>
@@ -851,7 +839,7 @@
 				</less-than-equals>
 			</condition>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/OVolume</property>
 			</volume>
 			<position>
 				<x>-5</x>
@@ -870,7 +858,7 @@
 				<property>controls/switches/seatbelt-sign</property>
 			</condition>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/IVolume</property>
 			</volume>
 			<position>
 				<x>0.00</x>
@@ -878,7 +866,7 @@
 				<z>0.00</z>
 			</position>
 			<reference-dist>10.0</reference-dist>
-			<max-dist>100.0</max-dist>
+			<max-dist>300.0</max-dist>
 		</seatbelt>
 
 		<music>
@@ -889,7 +877,7 @@
 				<property>controls/switches/music</property>
 			</condition>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/IVolume</property>
 			</volume>
 			<position>
 				<x>0.00</x>
@@ -897,7 +885,7 @@
 				<z>0.00</z>
 			</position>
 			<reference-dist>10.0</reference-dist>
-			<max-dist>100.0</max-dist>
+			<max-dist>300.0</max-dist>
 		</music>
 
 		<music2>
@@ -908,7 +896,7 @@
 				<property>controls/switches/music2</property>
 			</condition>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/IVolume</property>
 			</volume>
 			<position>
 				<x>0.00</x>
@@ -916,7 +904,7 @@
 				<z>0.00</z>
 			</position>
 			<reference-dist>10.0</reference-dist>
-			<max-dist>100.0</max-dist>
+			<max-dist>300.0</max-dist>
 		</music2>
 
 		<pretakeoff>
@@ -927,7 +915,7 @@
 				<property>controls/switches/pretakeoff</property>
 			</condition>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/IVolume</property>
 			</volume>
 			<position>
 				<x>0.00</x>
@@ -935,7 +923,7 @@
 				<z>0.00</z>
 			</position>
 			<reference-dist>10.0</reference-dist>
-			<max-dist>100.0</max-dist>
+			<max-dist>300.0</max-dist>
 		</pretakeoff>
 
 		<climbing>
@@ -946,7 +934,7 @@
 				<property>controls/switches/climbing</property>
 			</condition>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/IVolume</property>
 			</volume>
 			<position>
 				<x>0.00</x>
@@ -954,7 +942,7 @@
 				<z>0.00</z>
 			</position>
 			<reference-dist>10.0</reference-dist>
-			<max-dist>100.0</max-dist>
+			<max-dist>300.0</max-dist>
 		</climbing>
 
 		<descending>
@@ -965,7 +953,7 @@
 				<property>controls/switches/descending</property>
 			</condition>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/IVolume</property>
 			</volume>
 			<position>
 				<x>0.00</x>
@@ -973,7 +961,7 @@
 				<z>0.00</z>
 			</position>
 			<reference-dist>10.0</reference-dist>
-			<max-dist>100.0</max-dist>
+			<max-dist>300.0</max-dist>
 		</descending>
 
 		<arrival>
@@ -984,7 +972,7 @@
 				<property>controls/switches/arrival</property>
 			</condition>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/IVolume</property>
 			</volume>
 			<position>
 				<x>0.00</x>
@@ -992,7 +980,7 @@
 				<z>0.00</z>
 			</position>
 			<reference-dist>10.0</reference-dist>
-			<max-dist>100.0</max-dist>
+			<max-dist>300.0</max-dist>
 		</arrival>
 
 		<emergency>
@@ -1003,7 +991,7 @@
 				<property>controls/switches/emergency</property>
 			</condition>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/IVolume</property>
 			</volume>
 			<position>
 				<x>0.00</x>
@@ -1011,7 +999,7 @@
 				<z>0.00</z>
 			</position>
 			<reference-dist>10.0</reference-dist>
-			<max-dist>100.0</max-dist>
+			<max-dist>300.0</max-dist>
 		</emergency>
 
 		<safety>
@@ -1022,7 +1010,7 @@
 				<property>controls/switches/safety</property>
 			</condition>
 			<volume>
-				<property>sim/sound/Evolume</property>
+				<property>sim/sound/IVolume</property>
 			</volume>
 			<position>
 				<x>0.00</x>
@@ -1030,7 +1018,7 @@
 				<z>0.00</z>
 			</position>
 			<reference-dist>10.0</reference-dist>
-			<max-dist>100.0</max-dist>
+			<max-dist>300.0</max-dist>
 		</safety>
 
 	</fx>

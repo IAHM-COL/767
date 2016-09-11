@@ -2,7 +2,7 @@
 
 <?xml-stylesheet type="text/xsl" href="http://jsbsim.sourceforge.net/JSBSim.xsl"?>
 
-<fdm_config name="767-300JWocky" version="2.0" release="ALPHA"
+<fdm_config name="767-400ER" version="2.0" release="ALPHA"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
 
@@ -10,13 +10,13 @@
 		<author> Aeromatic v 0.95 </author>
 		<filecreationdate>2015-03-26</filecreationdate>
 		<version>$Revision: 1.15 $</version>
-		<description> Models a 767-300JWocky. </description>
+		<description> Models a 767-400ER </description>
 	</fileheader>
 
 	<!--
-		File:     767-300JWocky.xml
+		File:     767-400ER.xml
 		Inputs:
-			name:          767-300JWocky
+			name:          767-400ER.xml
 			type:          two-engine transonic transport
 			max weight:    415000 lb (415000 f. KC-46+ E-767+Workshop, 412000 f. -300ER, 350000 f. -300)
 			wing span:     156.1 ft

@@ -28,12 +28,12 @@
 		</rating>
 
 		<flight-model>jsb</flight-model>
-  		<aero>767-2C</aero>
-		<engine>PW4062</engine>
+  		<aero>Aero/767-2C</aero>
+		<variant>767-2C</variant>
 
 		<!-- Splash screen while loading -->
 		<startup>
-			<splash-texture>Aircraft/767/splash.png</splash-texture>
+			<splash-texture>Aircraft/767/Splashes/splash.png</splash-texture>
 		</startup>
 
 		<!-- Settings for model -->
@@ -67,6 +67,15 @@
 		<freeze>
 			<fuel>false</fuel>	<!-- false is default -->
 		</freeze>
+
+		<gui>
+			<dialogs>
+				<autopilot>
+					<kts-select type="bool">true</kts-select>
+					<mach-select tpye="bool">false</mach-select>
+				</autopilot>
+			</dialogs>
+		</gui>
 
 		<fuel-fraction>0.8</fuel-fraction>
 
@@ -344,8 +353,22 @@
 
 		<menubar>
 			<default>
+				<menu n="3">
+					<item>
+						<name>autopilot</name>
+						<label>Autopilot Settings</label>
+						<binding>
+							<command>nasal</command>
+							<script>
+								var autopilot = gui.Dialog.new("sim/gui/dialogs/autopilot/dialog", 
+											"Aircraft/JPack/Voodoomaster/Dialogs/autopilot8.xml");
+								autopilot.open();
+							</script>
+						</binding>
+					</item>
+				</menu>
 				<menu n="100">
-					<label>Pegasus</label>
+					<label>767-2C</label>
 					<enabled type="bool">true</enabled>
 
 					<item>
@@ -353,72 +376,6 @@
 						<binding>
 							<command>property-toggle</command>
 							<property>sim/model/start-idling</property>
-						</binding>
-					</item>
-
-					<item>
-						<label>Extend Boom</label>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel/boom-angle</property>
-							<value>0.6</value>
-						</binding>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel/boom-extend</property>
-							<value>1.0</value>
-						</binding>
-					</item>
-
-					<item>
-						<label>Retract Boom</label>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel/boom-angle</property>
-							<value>0.0</value>
-						</binding>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel/boom-extend</property>
-							<value>0.0</value>
-						</binding>
-					</item>
-
-					<item>
-						<label>Extend Probes</label>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel[1]/probe-extended</property>
-							<value>true</value>
-						</binding>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel[2]/probe-extended</property>
-							<value>true</value>
-						</binding>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel[3]/probe-extended</property>
-							<value>true</value>
-						</binding>
-					</item>
-
-					<item>
-						<label>Retract Probes</label>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel[1]/probe-extended</property>
-							<value>false</value>
-						</binding>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel[2]/probe-extended</property>
-							<value>false</value>
-						</binding>
-						<binding>
-							<command>property-assign</command>
-							<property>voodoomaster/refuel[3]/probe-extended</property>
-							<value>false</value>
 						</binding>
 					</item>
 
@@ -498,6 +455,7 @@
 	</sim>
 
 	<consumables>
+		<!-- Configuration of tanks for 767-2C like the 767-200ER -->
 		<fuel>
 			<tank n="0">
 				<name>Left wing</name>
@@ -508,19 +466,19 @@
 			<tank n="1">
 				<name>Center forward</name>
 				<tank-num type="int">1</tank-num>
-				<level-gal_us archive="y">6000</level-gal_us>
+				<level-gal_us archive="y">3690</level-gal_us>
 			</tank>
 
 			<tank n="2">
 				<name>Center middle</name>
 				<tank-num type="int">2</tank-num>
-				<level-gal_us archive="y">6070</level-gal_us>
+				<level-gal_us archive="y">4560</level-gal_us>
 			</tank>
 
 			<tank n="3">
 				<name>Center aft</name>
 				<tank-num type="int">3</tank-num>
-				<level-gal_us archive="y">6000</level-gal_us>
+				<level-gal_us archive="y">3750</level-gal_us>
 			</tank>
 
 			<tank n="4">
@@ -543,27 +501,35 @@
 		</weight>
 
 		<weight n="1">
-			<!-- boom operator + load master -->
-			<name>Refuel ops</name>
+			<!-- 3 extra seats in cockpit -->
+			<name>Wxrea Seats</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]" />
-			<min-lb type="double">  200</min-lb>
-			<max-lb type="double">  400</max-lb>
+			<min-lb type="double">    0</min-lb>
+			<max-lb type="double">  600</max-lb>
 		</weight>
 
 		<weight n="2">
-			<!-- AirVac team (KC-46) or TechTeam (Workshop) -->
-			<name>AirVac Team</name>
+			<!-- Upper deck cargo -->
+			<name>Upper Deck Cargo</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]" />
 			<min-lb type="double">    0</min-lb>
-			<max-lb type="double"> 3000</max-lb>
+			<max-lb type="double">32000</max-lb>
 		</weight>
 
 		<weight n="3">
-			<!-- Spare parts -->
-			<name>Load</name>
+			<!-- Lower deck forward cargo -->
+			<name>Lower Deck Fwd Cargo</name>
 			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]" />
 			<min-lb type="double">    0</min-lb>
-			<max-lb type="double">65000</max-lb>
+			<max-lb type="double">16000</max-lb>
+		</weight>
+
+		<weight n="4">
+			<!-- Lower deck aft cargo -->
+			<name>Lower Deck Aft Cargo</name>
+			<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[4]" />
+			<min-lb type="double">    0</min-lb>
+			<max-lb type="double">16000</max-lb>
 		</weight>
 
 	</payload>
@@ -714,18 +680,74 @@
 		</generic>
 	</multiplay>
 
-	<tanker type="bool">true</tanker>
+	<tanker type="bool">false</tanker>
+	
+	<limits>
+		<vne>380</vne>
+ 
+		<max-positive-g>4.4</max-positive-g>
+		<max-negative-g>-1.76</max-negative-g>
+ 
+		<max-flap-extension-speed n="0">
+			<flaps>0.167</flaps>
+			<speed>255</speed>
+		</max-flap-extension-speed>
+		<max-flap-extension-speed n="1">
+			<flaps>0.333</flaps>
+			<speed>235</speed>
+		</max-flap-extension-speed>
+		<max-flap-extension-speed n="2">
+			<flaps>0.667</flaps>
+			<speed>215</speed>
+		</max-flap-extension-speed>
+		<max-flap-extension-speed n="3">
+			<flaps>0.833</flaps>
+			<speed>205</speed>
+		</max-flap-extension-speed>
+		<max-flap-extension-speed n="4">
+			<flaps>1.000</flaps>
+			<speed>195</speed>
+		</max-flap-extension-speed>
+		<max-flap-extension-speed n="5">
+			<flaps>1.000</flaps>
+			<speed>185</speed>
+		</max-flap-extension-speed>
+		<max-flap-extension-speed n="6">
+			<flaps>1.000</flaps>
+			<speed>175</speed>
+		</max-flap-extension-speed>
+		<max-flap-extension-speed n="7">
+			<flaps>1.000</flaps>
+			<speed>165</speed>
+		</max-flap-extension-speed>
+		<max-flap-extension-speed n="8">
+			<flaps>1.000</flaps>
+			<speed>160</speed>
+		</max-flap-extension-speed>
+
+		<max-gear-extension-speed>220</max-gear-extension-speed>
+
+		<mass-and-balance>
+			<maximum-ramp-mass-lbs>435000</maximum-ramp-mass-lbs>
+			<maximum-takeoff-mass-lbs>415000</maximum-takeoff-mass-lbs>
+			<maximum-landing-mass-lbs>320000</maximum-landing-mass-lbs>
+			<maximum-zero-fuel-mass-lbs>295000</maximum-zero-fuel-mass-lbs>
+		</mass-and-balance>
+	</limits>
 
 	<autopilot>
 
 		<settings>
 			<kts-mach-select type="string">kts</kts-mach-select>
-			<max-pitch type="float">6.0</max-pitch>
-			<bank-angle-limit-deg type="int">45</bank-angle-limit-deg>
+			<max-pitch type="float"> 6.0</max-pitch>
+			<min-pitch type="float">-4.0</min-pitch>
+			<bank-angle-limit-deg type="int">35</bank-angle-limit-deg>
 		</settings>
 
 		<internal>
-			<max-pitch type="float">6.0</max-pitch>
+			<target-pitch-deg type="float">0.00</target-pitch-deg>
+			<max-pitch type="float"> 6.0</max-pitch>
+			<min-pitch type="float">-4.0</min-pitch>
 		</internal>
 
 	</autopilot>

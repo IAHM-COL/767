@@ -71,7 +71,7 @@
 		<izz unit="SLUG*FT2">   9220445 </izz>
 		<emptywt unit="LBS" >    198440 </emptywt>
 		<location name="CG" unit="IN">
-			<x> -20.00 </x>
+			<x> -30.00 </x>
 			<y>   0.00 </y>
 			<z> -54.07 </z>
 		</location>
@@ -96,9 +96,9 @@
 			</location>
 		</pointmass> 
 
-		<pointmass name="AirVac">
+		<pointmass name="Tech ops">
 			<description>Careful, can be overloaded! Different configurations for different missions!</description>
-			<weight unit="LBS"> 0.0000 </weight>
+			<weight unit="LBS"> 3000.0000 </weight>
 			<location name="Tech ops" unit="IN">
 				<x>  -400.00 </x>
 				<y>     0.00 </y>
@@ -106,9 +106,19 @@
 			</location>
 		</pointmass> 
 
-		<pointmass name="Load">
+		<pointmass name="Radar ops">
 			<description>Careful, can be overloaded! Different configurations for different missions!</description>
-			<weight unit="LBS"> 0.0000 </weight>
+			<weight unit="LBS"> 600.0000 </weight>
+			<location name="Tech ops" unit="IN">
+				<x>   200.00 </x>
+				<y>     0.00 </y>
+				<z>   -54.07 </z>
+			</location>
+		</pointmass> 
+
+		<pointmass name="Spare parts">
+			<description>Careful, can be overloaded! Different configurations for different missions!</description>
+			<weight unit="LBS"> 65000.0000 </weight>
 			<location name="Tech ops" unit="IN">
 				<x>  	0.00 </x>
 				<y>     0.00 </y>
@@ -122,7 +132,7 @@
 
 		<contact type="BOGEY" name="NOSE">
 			<location unit="IN">
-				<x> -1080.19 </x>
+				<x> -980.19 </x>
 				<y>    0.00 </y>
 				<z>  -63.00 </z>
 			</location>
@@ -132,7 +142,7 @@
 			<spring_coeff unit="LBS/FT">      247200.00 </spring_coeff>
 			<damping_coeff unit="LBS/FT/SEC"> 206000.00 </damping_coeff>
 			<damping_coeff_rebound unit="LBS/FT/SEC">150000</damping_coeff_rebound>
-			<max_steer unit="DEG"> 45.00 </max_steer>
+			<max_steer unit="DEG"> 25.00 </max_steer>
 			<brake_group>NONE</brake_group>
 			<retractable>1</retractable>
 		</contact>
@@ -312,7 +322,7 @@
 
 	</propulsion>
 
-	<flight_control name="FCS: 767-300JWocky">
+	<flight_control name="FCS: 767-Workshop">
 
 		<channel name="Pitch">
 
@@ -580,10 +590,10 @@
 					<table>
 						<independentVar lookup="row">aero/alpha-rad</independentVar>
 						<tableData>
-							-0.20 -0.580
-							 0.00  0.200
-							 0.23  1.200
-							 0.60  0.600
+							-0.20 -0.880
+							 0.00  0.500
+							 0.23  1.500
+							 0.60  0.900
 						</tableData>
 					</table>
 				</product>
